@@ -6,3 +6,21 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Methods**: Comparing standard Scikit Learn models with Azure Automated Machine Learning 
 * **Azure Functionalities**: Running an Experiment, Automated Machine Learning, and Logging Metrics
 * **Results**: Increased testing accuracy by 3.25%!
+
+### [`CIFAR-notebook`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/tree/master/CIFAR-notebook)
+* **Task**: 
+* **Methods**: 
+* **Azure Functionalities**: 
+* **Results**: 
+
+### [`telecom-churn`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/telecom-churn/Telecom%20Churn.ipynb)
+* **Task**: 
+* **Methods**: 
+* **Azure Functionalities**: 
+* **Results**: 
+
+### [`mashable_news_popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/mashable-news-popularity/mashable_news_popularity.ipynb)
+* **Task**: Translating sentences from German to English
+* **Methods**:
+* **Azure Functionalities**: 
+* **Results**:
