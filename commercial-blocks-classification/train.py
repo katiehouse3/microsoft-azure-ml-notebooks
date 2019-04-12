@@ -39,7 +39,9 @@ def Classifier_Test_Train(model, model_name):
 	
 	table_row = [model_name, accuracy, train_t, predict_t]
 	run_logger = Run.get_context()
+	run_logger.log(name='Model', value=model_name)
 	run_logger.log(name='Accuracy', value=accuracy)
+	run_logger.log(name='Training_Time', value=train_t)
 	return table_row
 
 run = Run.get_context() 
