@@ -1609,3 +1609,1606 @@
 2019-04-12 09:27:23,096 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=30367.96 [ms]
 2019-04-12 09:27:23,426 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=32539.55 [ms]
 2019-04-12 09:27:23,891 - INFO - 600 : Run Complete.
+2019-04-12 13:43:57,342 - INFO - 114 : Starting usage telemetry collection
+2019-04-12 13:43:57,438 - INFO - 397 : Extracting user Data
+2019-04-12 13:43:58,450 - INFO - 431 : Start creating parent run with DTO:  - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize.
+2019-04-12 13:43:59,511 - INFO - 65 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db]SDK dependencies versions:{"azureml-widgets": "1.0.17", "azureml-train": "1.0.17", "azureml-train-restclients-hyperdrive": "1.0.17", "azureml-train-core": "1.0.17", "azureml-train-automl": "1.0.17.1", "azureml-telemetry": "1.0.17", "azureml-sdk": "1.0.17", "azureml-pipeline": "1.0.17", "azureml-pipeline-steps": "1.0.17", "azureml-pipeline-core": "1.0.17", "azureml-dataprep": "1.0.16", "azureml-dataprep-native": "11.2.2", "azureml-core": "1.0.17.1", "azureml-contrib-notebook": "1.0.17"}.
+2019-04-12 13:43:59,735 - INFO - 456 : [ParentRunID:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db] Local run using input X and y.
+2019-04-12 13:43:59,739 - INFO - 459 : Parent Run ID: AutoML_25318bc8-663a-4a6d-8198-734ad80be0db
+2019-04-12 13:43:59,739 - INFO - 938 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db]Input X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:43:59,739 - INFO - 938 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db]Input y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108000.
+2019-04-12 13:43:59,743 - INFO - 93 : ActivityStarted, PreProcess
+2019-04-12 13:43:59,743 - INFO - 490 : The size of raw data is: 13500411
+2019-04-12 13:43:59,743 - INFO - 32 : Pre-processing user data
+2019-04-12 13:43:59,939 - INFO - 759 : [YCol]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "2", "column_type": "\"floating\"", "average_entry_length": "3.505777777777778", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.00014814814814814815"}
+2019-04-12 13:44:00,107 - INFO - 759 : [XColNum:0]RawFeatureStats:{"num_unique_vals": "931", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "4", "column_type": "\"floating\"", "average_entry_length": "4.327111111111111", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.06896296296296296"}
+2019-04-12 13:44:00,195 - INFO - 759 : [XColNum:1]RawFeatureStats:{"num_unique_vals": "12962", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "7.767407407407408", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9601481481481482"}
+2019-04-12 13:44:00,287 - INFO - 759 : [XColNum:2]RawFeatureStats:{"num_unique_vals": "12941", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.752370370370371", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9585925925925926"}
+2019-04-12 13:44:00,371 - INFO - 759 : [XColNum:3]RawFeatureStats:{"num_unique_vals": "12971", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "8.161333333333333", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9608148148148148"}
+2019-04-12 13:44:00,455 - INFO - 759 : [XColNum:4]RawFeatureStats:{"num_unique_vals": "12966", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "8.020666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9604444444444444"}
+2019-04-12 13:44:00,571 - INFO - 759 : [XColNum:5]RawFeatureStats:{"num_unique_vals": "8706", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.743555555555556", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6448888888888888"}
+2019-04-12 13:44:00,647 - INFO - 759 : [XColNum:6]RawFeatureStats:{"num_unique_vals": "7497", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.747185185185185", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5553333333333333"}
+2019-04-12 13:44:00,727 - INFO - 759 : [XColNum:7]RawFeatureStats:{"num_unique_vals": "10662", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.641777777777778", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7897777777777778"}
+2019-04-12 13:44:00,803 - INFO - 759 : [XColNum:8]RawFeatureStats:{"num_unique_vals": "11565", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.747333333333334", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8566666666666667"}
+2019-04-12 13:44:00,951 - INFO - 759 : [XColNum:9]RawFeatureStats:{"num_unique_vals": "12945", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "10.649111111111111", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9588888888888889"}
+2019-04-12 13:44:01,073 - INFO - 759 : [XColNum:10]RawFeatureStats:{"num_unique_vals": "12966", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "10.188962962962963", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9604444444444444"}
+2019-04-12 13:44:01,193 - INFO - 759 : [XColNum:11]RawFeatureStats:{"num_unique_vals": "12143", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "10.494444444444444", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8994814814814814"}
+2019-04-12 13:44:01,301 - INFO - 759 : [XColNum:12]RawFeatureStats:{"num_unique_vals": "12961", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "10.541481481481481", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9600740740740741"}
+2019-04-12 13:44:01,445 - INFO - 759 : [XColNum:13]RawFeatureStats:{"num_unique_vals": "12968", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "10.298222222222222", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9605925925925926"}
+2019-04-12 13:44:01,617 - INFO - 759 : [XColNum:14]RawFeatureStats:{"num_unique_vals": "12965", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "10.388666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9603703703703703"}
+2019-04-12 13:44:01,721 - INFO - 759 : [XColNum:15]RawFeatureStats:{"num_unique_vals": "12952", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "9.531703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9594074074074074"}
+2019-04-12 13:44:01,821 - INFO - 759 : [XColNum:16]RawFeatureStats:{"num_unique_vals": "12959", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "8.71725925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.959925925925926"}
+2019-04-12 13:44:01,921 - INFO - 759 : [XColNum:17]RawFeatureStats:{"num_unique_vals": "12848", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.741851851851852", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9517037037037037"}
+2019-04-12 13:44:02,013 - INFO - 759 : [XColNum:18]RawFeatureStats:{"num_unique_vals": "12466", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.743703703703703", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9234074074074075"}
+2019-04-12 13:44:02,101 - INFO - 759 : [XColNum:19]RawFeatureStats:{"num_unique_vals": "12054", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.7428888888888885", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8928888888888888"}
+2019-04-12 13:44:02,177 - INFO - 759 : [XColNum:20]RawFeatureStats:{"num_unique_vals": "11799", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.7411111111111115", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.874"}
+2019-04-12 13:44:02,253 - INFO - 759 : [XColNum:21]RawFeatureStats:{"num_unique_vals": "11577", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.739703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8575555555555555"}
+2019-04-12 13:44:02,369 - INFO - 759 : [XColNum:22]RawFeatureStats:{"num_unique_vals": "11294", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.730074074074074", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8365925925925926"}
+2019-04-12 13:44:02,449 - INFO - 759 : [XColNum:23]RawFeatureStats:{"num_unique_vals": "10968", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.721259259259259", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8124444444444444"}
+2019-04-12 13:44:02,529 - INFO - 759 : [XColNum:24]RawFeatureStats:{"num_unique_vals": "10619", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.698518518518519", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7865925925925926"}
+2019-04-12 13:44:02,609 - INFO - 759 : [XColNum:25]RawFeatureStats:{"num_unique_vals": "10301", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.683037037037037", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7630370370370371"}
+2019-04-12 13:44:02,685 - INFO - 759 : [XColNum:26]RawFeatureStats:{"num_unique_vals": "9895", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.671185185185185", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7329629629629629"}
+2019-04-12 13:44:02,761 - INFO - 759 : [XColNum:27]RawFeatureStats:{"num_unique_vals": "9530", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.658444444444444", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.705925925925926"}
+2019-04-12 13:44:02,837 - INFO - 759 : [XColNum:28]RawFeatureStats:{"num_unique_vals": "9162", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.636296296296297", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6786666666666666"}
+2019-04-12 13:44:02,921 - INFO - 759 : [XColNum:29]RawFeatureStats:{"num_unique_vals": "8870", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.617407407407407", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6570370370370371"}
+2019-04-12 13:44:03,001 - INFO - 759 : [XColNum:30]RawFeatureStats:{"num_unique_vals": "8859", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.606962962962963", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6562222222222223"}
+2019-04-12 13:44:03,077 - INFO - 759 : [XColNum:31]RawFeatureStats:{"num_unique_vals": "7805", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.564", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5781481481481482"}
+2019-04-12 13:44:03,157 - INFO - 759 : [XColNum:32]RawFeatureStats:{"num_unique_vals": "7325", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.519629629629629", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5425925925925926"}
+2019-04-12 13:44:03,229 - INFO - 759 : [XColNum:33]RawFeatureStats:{"num_unique_vals": "7011", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.47562962962963", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5193333333333333"}
+2019-04-12 13:44:03,305 - INFO - 759 : [XColNum:34]RawFeatureStats:{"num_unique_vals": "6671", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.428814814814815", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.49414814814814817"}
+2019-04-12 13:44:03,381 - INFO - 759 : [XColNum:35]RawFeatureStats:{"num_unique_vals": "6298", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.386814814814815", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.4665185185185185"}
+2019-04-12 13:44:03,493 - INFO - 759 : [XColNum:36]RawFeatureStats:{"num_unique_vals": "5931", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.3345925925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.43933333333333335"}
+2019-04-12 13:44:03,569 - INFO - 759 : [XColNum:37]RawFeatureStats:{"num_unique_vals": "5610", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.292148148148148", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.41555555555555557"}
+2019-04-12 13:44:03,669 - INFO - 759 : [XColNum:38]RawFeatureStats:{"num_unique_vals": "5282", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.244666666666666", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.39125925925925925"}
+2019-04-12 13:44:03,769 - INFO - 759 : [XColNum:39]RawFeatureStats:{"num_unique_vals": "4969", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.1962222222222225", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.36807407407407405"}
+2019-04-12 13:44:03,845 - INFO - 759 : [XColNum:40]RawFeatureStats:{"num_unique_vals": "4738", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.149037037037037", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.350962962962963"}
+2019-04-12 13:44:03,925 - INFO - 759 : [XColNum:41]RawFeatureStats:{"num_unique_vals": "4487", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.099555555555556", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.33237037037037037"}
+2019-04-12 13:44:04,001 - INFO - 759 : [XColNum:42]RawFeatureStats:{"num_unique_vals": "4269", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.0457777777777775", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.31622222222222224"}
+2019-04-12 13:44:04,077 - INFO - 759 : [XColNum:43]RawFeatureStats:{"num_unique_vals": "4011", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.9794074074074075", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.2971111111111111"}
+2019-04-12 13:44:04,153 - INFO - 759 : [XColNum:44]RawFeatureStats:{"num_unique_vals": "3759", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.926666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.27844444444444444"}
+2019-04-12 13:44:04,229 - INFO - 759 : [XColNum:45]RawFeatureStats:{"num_unique_vals": "3553", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.86325925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.2631851851851852"}
+2019-04-12 13:44:04,337 - INFO - 759 : [XColNum:46]RawFeatureStats:{"num_unique_vals": "3335", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.801333333333333", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.24703703703703703"}
+2019-04-12 13:44:04,409 - INFO - 759 : [XColNum:47]RawFeatureStats:{"num_unique_vals": "3149", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.742814814814815", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.23325925925925925"}
+2019-04-12 13:44:04,485 - INFO - 759 : [XColNum:48]RawFeatureStats:{"num_unique_vals": "2937", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.6777037037037035", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.21755555555555556"}
+2019-04-12 13:44:04,573 - INFO - 759 : [XColNum:49]RawFeatureStats:{"num_unique_vals": "2739", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.610074074074074", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.2028888888888889"}
+2019-04-12 13:44:04,669 - INFO - 759 : [XColNum:50]RawFeatureStats:{"num_unique_vals": "2563", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.539703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.18985185185185185"}
+2019-04-12 13:44:04,793 - INFO - 759 : [XColNum:51]RawFeatureStats:{"num_unique_vals": "2397", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.483407407407407", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.17755555555555555"}
+2019-04-12 13:44:04,877 - INFO - 759 : [XColNum:52]RawFeatureStats:{"num_unique_vals": "2216", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.41962962962963", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.16414814814814815"}
+2019-04-12 13:44:05,005 - INFO - 759 : [XColNum:53]RawFeatureStats:{"num_unique_vals": "2046", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.3517777777777775", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.15155555555555555"}
+2019-04-12 13:44:05,098 - INFO - 759 : [XColNum:54]RawFeatureStats:{"num_unique_vals": "1919", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.291407407407408", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.14214814814814813"}
+2019-04-12 13:44:05,174 - INFO - 759 : [XColNum:55]RawFeatureStats:{"num_unique_vals": "1771", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.231333333333334", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.13118518518518518"}
+2019-04-12 13:44:05,290 - INFO - 759 : [XColNum:56]RawFeatureStats:{"num_unique_vals": "1639", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.166074074074074", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.12140740740740741"}
+2019-04-12 13:44:05,418 - INFO - 759 : [XColNum:57]RawFeatureStats:{"num_unique_vals": "12840", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.754296296296296", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9511111111111111"}
+2019-04-12 13:44:05,534 - INFO - 759 : [XColNum:58]RawFeatureStats:{"num_unique_vals": "12560", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.749259259259259", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.9303703703703704"}
+2019-04-12 13:44:05,646 - INFO - 759 : [XColNum:59]RawFeatureStats:{"num_unique_vals": "12145", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.744740740740741", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8996296296296297"}
+2019-04-12 13:44:05,782 - INFO - 759 : [XColNum:60]RawFeatureStats:{"num_unique_vals": "11739", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.749851851851852", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8695555555555555"}
+2019-04-12 13:44:05,922 - INFO - 759 : [XColNum:61]RawFeatureStats:{"num_unique_vals": "11256", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.746740740740741", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8337777777777777"}
+2019-04-12 13:44:06,046 - INFO - 759 : [XColNum:62]RawFeatureStats:{"num_unique_vals": "10757", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.734814814814815", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7968148148148149"}
+2019-04-12 13:44:06,126 - INFO - 759 : [XColNum:63]RawFeatureStats:{"num_unique_vals": "10265", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.726666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7603703703703704"}
+2019-04-12 13:44:06,206 - INFO - 759 : [XColNum:64]RawFeatureStats:{"num_unique_vals": "9718", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.721703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7198518518518519"}
+2019-04-12 13:44:06,330 - INFO - 759 : [XColNum:65]RawFeatureStats:{"num_unique_vals": "9162", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.708296296296297", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6786666666666666"}
+2019-04-12 13:44:06,410 - INFO - 759 : [XColNum:66]RawFeatureStats:{"num_unique_vals": "8658", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.703925925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6413333333333333"}
+2019-04-12 13:44:06,486 - INFO - 759 : [XColNum:67]RawFeatureStats:{"num_unique_vals": "8169", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.689185185185186", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6051111111111112"}
+2019-04-12 13:44:06,562 - INFO - 759 : [XColNum:68]RawFeatureStats:{"num_unique_vals": "7587", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.667259259259259", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.562"}
+2019-04-12 13:44:06,638 - INFO - 759 : [XColNum:69]RawFeatureStats:{"num_unique_vals": "7179", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.64637037037037", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5317777777777778"}
+2019-04-12 13:44:06,714 - INFO - 759 : [XColNum:70]RawFeatureStats:{"num_unique_vals": "6658", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.619703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.49318518518518517"}
+2019-04-12 13:44:06,822 - INFO - 759 : [XColNum:71]RawFeatureStats:{"num_unique_vals": "6222", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.583185185185185", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.4608888888888889"}
+2019-04-12 13:44:06,902 - INFO - 759 : [XColNum:72]RawFeatureStats:{"num_unique_vals": "5802", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.541111111111111", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.42977777777777776"}
+2019-04-12 13:44:06,978 - INFO - 759 : [XColNum:73]RawFeatureStats:{"num_unique_vals": "5384", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.489111111111111", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.3988148148148148"}
+2019-04-12 13:44:07,054 - INFO - 759 : [XColNum:74]RawFeatureStats:{"num_unique_vals": "5005", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.438592592592593", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.37074074074074076"}
+2019-04-12 13:44:07,134 - INFO - 759 : [XColNum:75]RawFeatureStats:{"num_unique_vals": "4556", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.375481481481481", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.3374814814814815"}
+2019-04-12 13:44:07,238 - INFO - 759 : [XColNum:76]RawFeatureStats:{"num_unique_vals": "4154", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.3004444444444445", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.3077037037037037"}
+2019-04-12 13:44:07,314 - INFO - 759 : [XColNum:77]RawFeatureStats:{"num_unique_vals": "3820", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.230370370370371", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.28296296296296297"}
+2019-04-12 13:44:07,362 - INFO - 64 : memory usage 270745600
+2019-04-12 13:44:07,362 - INFO - 64 : child memory usage 270745600
+2019-04-12 13:44:07,366 - INFO - 73 : cpu time 19.5625
+2019-04-12 13:44:07,366 - INFO - 73 : child cpu time 0.0
+2019-04-12 13:44:07,394 - INFO - 759 : [XColNum:78]RawFeatureStats:{"num_unique_vals": "3495", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.127851851851852", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.2588888888888889"}
+2019-04-12 13:44:07,478 - INFO - 759 : [XColNum:79]RawFeatureStats:{"num_unique_vals": "3098", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.994222222222223", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.22948148148148148"}
+2019-04-12 13:44:07,558 - INFO - 759 : [XColNum:80]RawFeatureStats:{"num_unique_vals": "2804", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.799925925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.2077037037037037"}
+2019-04-12 13:44:07,630 - INFO - 759 : [XColNum:81]RawFeatureStats:{"num_unique_vals": "2420", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.520148148148148", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.17925925925925926"}
+2019-04-12 13:44:07,738 - INFO - 759 : [XColNum:82]RawFeatureStats:{"num_unique_vals": "2076", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.141407407407407", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.1537777777777778"}
+2019-04-12 13:44:07,806 - INFO - 759 : [XColNum:83]RawFeatureStats:{"num_unique_vals": "1704", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "5.659111111111111", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.12622222222222224"}
+2019-04-12 13:44:07,910 - INFO - 759 : [XColNum:84]RawFeatureStats:{"num_unique_vals": "1339", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "5.004074074074074", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.09918518518518518"}
+2019-04-12 13:44:07,970 - INFO - 759 : [XColNum:85]RawFeatureStats:{"num_unique_vals": "639", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "4.099851851851851", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.04733333333333333"}
+2019-04-12 13:44:08,018 - INFO - 759 : [XColNum:86]RawFeatureStats:{"num_unique_vals": "11", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "3", "column_type": "\"floating\"", "average_entry_length": "3.068888888888889", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.0008148148148148148"}
+2019-04-12 13:44:08,062 - INFO - 759 : [XColNum:87]RawFeatureStats:{"num_unique_vals": "1", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"floating\"", "average_entry_length": "3.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "7.407407407407407e-05"}
+2019-04-12 13:44:08,102 - INFO - 759 : [XColNum:88]RawFeatureStats:{"num_unique_vals": "1", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"floating\"", "average_entry_length": "3.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "7.407407407407407e-05"}
+2019-04-12 13:44:08,178 - INFO - 759 : [XColNum:89]RawFeatureStats:{"num_unique_vals": "7111", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "5.704814814814815", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5267407407407407"}
+2019-04-12 13:44:08,274 - INFO - 759 : [XColNum:90]RawFeatureStats:{"num_unique_vals": "7394", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "5.821481481481482", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5477037037037037"}
+2019-04-12 13:44:08,342 - INFO - 759 : [XColNum:91]RawFeatureStats:{"num_unique_vals": "8293", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.130592592592593", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6142962962962963"}
+2019-04-12 13:44:08,406 - INFO - 759 : [XColNum:92]RawFeatureStats:{"num_unique_vals": "7705", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "5.967481481481482", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5707407407407408"}
+2019-04-12 13:44:08,474 - INFO - 759 : [XColNum:93]RawFeatureStats:{"num_unique_vals": "8241", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.144444444444445", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6104444444444445"}
+2019-04-12 13:44:08,538 - INFO - 759 : [XColNum:94]RawFeatureStats:{"num_unique_vals": "7861", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.007185185185185", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5822962962962963"}
+2019-04-12 13:44:08,622 - INFO - 759 : [XColNum:95]RawFeatureStats:{"num_unique_vals": "8154", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.123481481481481", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.604"}
+2019-04-12 13:44:08,690 - INFO - 759 : [XColNum:96]RawFeatureStats:{"num_unique_vals": "8847", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.340222222222223", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6553333333333333"}
+2019-04-12 13:44:08,790 - INFO - 759 : [XColNum:97]RawFeatureStats:{"num_unique_vals": "8259", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.143777777777777", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6117777777777778"}
+2019-04-12 13:44:08,858 - INFO - 759 : [XColNum:98]RawFeatureStats:{"num_unique_vals": "9916", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.722148148148148", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7345185185185186"}
+2019-04-12 13:44:08,934 - INFO - 759 : [XColNum:99]RawFeatureStats:{"num_unique_vals": "10308", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.8486666666666665", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7635555555555555"}
+2019-04-12 13:44:09,006 - INFO - 759 : [XColNum:100]RawFeatureStats:{"num_unique_vals": "9808", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.690592592592592", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7265185185185186"}
+2019-04-12 13:44:09,122 - INFO - 759 : [XColNum:101]RawFeatureStats:{"num_unique_vals": "11965", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.455925925925926", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8862962962962962"}
+2019-04-12 13:44:09,198 - INFO - 759 : [XColNum:102]RawFeatureStats:{"num_unique_vals": "11895", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.454740740740741", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8811111111111111"}
+2019-04-12 13:44:09,274 - INFO - 759 : [XColNum:103]RawFeatureStats:{"num_unique_vals": "11671", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.349703703703704", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8645185185185185"}
+2019-04-12 13:44:09,342 - INFO - 759 : [XColNum:104]RawFeatureStats:{"num_unique_vals": "7213", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "5.718666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5342962962962963"}
+2019-04-12 13:44:09,450 - INFO - 759 : [XColNum:105]RawFeatureStats:{"num_unique_vals": "7534", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "5.8348148148148145", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5580740740740741"}
+2019-04-12 13:44:09,518 - INFO - 759 : [XColNum:106]RawFeatureStats:{"num_unique_vals": "8281", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.1396296296296295", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6134074074074074"}
+2019-04-12 13:44:09,586 - INFO - 759 : [XColNum:107]RawFeatureStats:{"num_unique_vals": "7923", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "5.982222222222222", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5868888888888889"}
+2019-04-12 13:44:09,650 - INFO - 759 : [XColNum:108]RawFeatureStats:{"num_unique_vals": "8424", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.1595555555555555", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.624"}
+2019-04-12 13:44:09,750 - INFO - 759 : [XColNum:109]RawFeatureStats:{"num_unique_vals": "8076", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.026740740740741", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.5982222222222222"}
+2019-04-12 13:44:09,822 - INFO - 759 : [XColNum:110]RawFeatureStats:{"num_unique_vals": "8307", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.135481481481482", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6153333333333333"}
+2019-04-12 13:44:09,898 - INFO - 759 : [XColNum:111]RawFeatureStats:{"num_unique_vals": "8966", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.348444444444445", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6641481481481482"}
+2019-04-12 13:44:09,986 - INFO - 759 : [XColNum:112]RawFeatureStats:{"num_unique_vals": "8429", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.1562222222222225", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.6243703703703704"}
+2019-04-12 13:44:10,114 - INFO - 759 : [XColNum:113]RawFeatureStats:{"num_unique_vals": "9925", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "6.726666666666667", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7351851851851852"}
+2019-04-12 13:44:10,186 - INFO - 759 : [XColNum:114]RawFeatureStats:{"num_unique_vals": "10293", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.860592592592592", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7624444444444445"}
+2019-04-12 13:44:10,258 - INFO - 759 : [XColNum:115]RawFeatureStats:{"num_unique_vals": "9819", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "6.6995555555555555", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.7273333333333334"}
+2019-04-12 13:44:10,338 - INFO - 759 : [XColNum:116]RawFeatureStats:{"num_unique_vals": "11801", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.449851851851852", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8741481481481481"}
+2019-04-12 13:44:10,454 - INFO - 759 : [XColNum:117]RawFeatureStats:{"num_unique_vals": "11777", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "7.464", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.8723703703703704"}
+2019-04-12 13:44:10,530 - INFO - 759 : [XColNum:118]RawFeatureStats:{"num_unique_vals": "11543", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "7.357259259259259", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.855037037037037"}
+2019-04-12 13:44:10,574 - INFO - 759 : [XColNum:119]RawFeatureStats:{"num_unique_vals": "1", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"floating\"", "average_entry_length": "3.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "7.407407407407407e-05"}
+2019-04-12 13:44:10,618 - INFO - 759 : [XColNum:120]RawFeatureStats:{"num_unique_vals": "1", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"floating\"", "average_entry_length": "3.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "7.407407407407407e-05"}
+2019-04-12 13:44:10,662 - INFO - 759 : [XColNum:121]RawFeatureStats:{"num_unique_vals": "1", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"floating\"", "average_entry_length": "3.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "7.407407407407407e-05"}
+2019-04-12 13:44:10,790 - INFO - 759 : [XColNum:122]RawFeatureStats:{"num_unique_vals": "13500", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "14.001407407407408", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "1.0"}
+2019-04-12 13:44:10,958 - INFO - 759 : [XColNum:123]RawFeatureStats:{"num_unique_vals": "13500", "total_number_vals": "13500", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "14.002518518518519", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "1.0"}
+2019-04-12 13:44:10,970 - INFO - 279 : Start doing label encoding on y data.
+2019-04-12 13:44:10,978 - INFO - 289 : End doing label encoding on y data.
+2019-04-12 13:44:10,978 - INFO - 96 : No preprocessing of data to be done here
+2019-04-12 13:44:10,978 - INFO - 346 : Creating cross validations
+2019-04-12 13:44:10,982 - INFO - 362 : Found cross validation type: KFoldCrossValidationSplit
+2019-04-12 13:44:10,982 - INFO - 454 : Completed creating cross-validation folds and featurizing them
+2019-04-12 13:44:10,982 - INFO - 498 : The size of transformed data is: 13501334
+2019-04-12 13:44:10,982 - INFO - 114 : ActivityCompleted: Activity=PreProcess, HowEnded=Success, Duration=11239.59 [ms]
+2019-04-12 13:44:14,032 - INFO - 566 : Start local loop.
+2019-04-12 13:44:14,036 - INFO - 569 : Start iteration: 0
+2019-04-12 13:44:14,040 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:44:14,044 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:44:14,108 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:44:14,740 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=696.0 [ms]
+2019-04-12 13:44:14,744 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "MaxAbsScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.3966666666666666, "learning_rate": 0.04211105263157895, "max_bin": 30, "max_depth": -1, "min_child_weight": 8, "min_data_in_leaf": 0.08620827586206897, "min_split_gain": 0.47368421052631576, "n_estimators": 100, "num_leaves": 209, "reg_alpha": 0.5263157894736842, "reg_lambda": 0.6842105263157894, "subsample": 0.8910526315789474}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "4e393b264ae2b33d776bd724596e655efdeaa027"}
+2019-04-12 13:44:15,281 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:44:15,285 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:44:15,285 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:44:15,285 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Starting fit_pipeline]memory usage 270860288
+2019-04-12 13:44:15,285 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Starting fit_pipeline]child memory usage 270860288
+2019-04-12 13:44:15,289 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Starting fit_pipeline]cpu time 23.796875
+2019-04-12 13:44:15,289 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Starting fit_pipeline]child cpu time 0.0
+2019-04-12 13:44:15,429 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:44:15,429 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:44:15,429 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0
+2019-04-12 13:44:15,429 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before preprocess]memory usage 270860288
+2019-04-12 13:44:15,429 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before preprocess]child memory usage 270860288
+2019-04-12 13:44:15,433 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before preprocess]cpu time 23.9375
+2019-04-12 13:44:15,433 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before preprocess]child cpu time 0.0
+2019-04-12 13:44:15,433 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After preprocess]memory usage 270860288
+2019-04-12 13:44:15,433 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After preprocess]child memory usage 270860288
+2019-04-12 13:44:15,433 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After preprocess]cpu time 23.9375
+2019-04-12 13:44:15,433 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After preprocess]child cpu time 0.0
+2019-04-12 13:44:15,433 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before executing pipeline]memory usage 270864384
+2019-04-12 13:44:15,437 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before executing pipeline]child memory usage 270864384
+2019-04-12 13:44:15,437 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before executing pipeline]cpu time 23.9375
+2019-04-12 13:44:15,461 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][Before executing pipeline]child cpu time 0.0
+2019-04-12 13:44:15,489 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "MaxAbsScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.3966666666666666, "learning_rate": 0.04211105263157895, "max_bin": 30, "max_depth": -1, "min_child_weight": 8, "min_data_in_leaf": 0.08620827586206897, "min_split_gain": 0.47368421052631576, "n_estimators": 100, "num_leaves": 209, "reg_alpha": 0.5263157894736842, "reg_lambda": 0.6842105263157894, "subsample": 0.8910526315789474}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "4e393b264ae2b33d776bd724596e655efdeaa027"}.
+2019-04-12 13:44:15,489 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:44:15,493 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:44:17,386 - INFO - 64 : memory usage 298549248
+2019-04-12 13:44:17,386 - INFO - 64 : child memory usage 353513472
+2019-04-12 13:44:17,386 - INFO - 73 : cpu time 24.125
+2019-04-12 13:44:17,386 - INFO - 73 : child cpu time 0.734375
+2019-04-12 13:44:22,035 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:44:22,035 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:44:22,071 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:23,683 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1612.5[ms]
+2019-04-12 13:44:23,687 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:23,687 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:23,803 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=116.0[ms]
+2019-04-12 13:44:23,803 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:23,911 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=224.05[ms]
+2019-04-12 13:44:23,923 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:24,527 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=604.17[ms]
+2019-04-12 13:44:24,527 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:24,527 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:24,627 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=100.0[ms]
+2019-04-12 13:44:24,631 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:24,795 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=268.0[ms]
+2019-04-12 13:44:24,819 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:25,735 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=916.0[ms]
+2019-04-12 13:44:25,735 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:25,739 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:25,899 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=160.01[ms]
+2019-04-12 13:44:25,899 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:26,144 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=408.88[ms]
+2019-04-12 13:44:26,144 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=4109.57[ms]
+2019-04-12 13:44:26,152 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:44:26,168 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=16.0[ms]
+2019-04-12 13:44:26,168 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=4133.57[ms]
+2019-04-12 13:44:26,264 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:44:26,268 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:44:26,300 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:27,354 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1053.89[ms]
+2019-04-12 13:44:27,354 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:27,354 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:27,386 - INFO - 64 : memory usage 284581888
+2019-04-12 13:44:27,386 - INFO - 64 : child memory usage 284585984
+2019-04-12 13:44:27,386 - INFO - 73 : cpu time 25.28125
+2019-04-12 13:44:27,386 - INFO - 73 : child cpu time 7.3125
+2019-04-12 13:44:27,578 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=224.0[ms]
+2019-04-12 13:44:27,582 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:28,084 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=729.94[ms]
+2019-04-12 13:44:28,084 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=1815.83[ms]
+2019-04-12 13:44:28,084 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1819.83[ms]
+2019-04-12 13:44:28,088 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=12590.98[ms]
+2019-04-12 13:44:28,088 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After executing pipeline]memory usage 273735680
+2019-04-12 13:44:28,088 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After executing pipeline]child memory usage 273735680
+2019-04-12 13:44:28,088 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After executing pipeline]cpu time 25.953125
+2019-04-12 13:44:28,092 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][After executing pipeline]child cpu time 7.3125
+2019-04-12 13:44:28,092 - INFO - 161 : Pipeline execution finished with a score of 0.9495382055857524
+2019-04-12 13:44:28,092 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:44:28,092 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:44:30,769 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:44:30,773 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:44:30,777 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:44:30,801 - INFO - 267 : The following metrics have been logged for the child run: {'log_loss': 0.3174645753282876, 'f1_score_macro': 0.8793116822439891, 'recall_score_macro': 0.8793924591187897, 'AUC_macro': 0.9495382055857524, 'recall_score_weighted': 0.8793333333333333, 'f1_score_weighted': 0.8793258238594409, 'average_precision_score_micro': 0.9490169450554387, 'precision_score_macro': 0.8794936280857882, 'balanced_accuracy': 0.8793924591187897, 'weighted_accuracy': 0.8792742674215855, 'average_precision_score_macro': 0.9490169450554387, 'average_precision_score_weighted': 0.9490169450554387, 'confusion_matrix': <class 'dict'>, 'accuracy': 0.8793333333333333, 'recall_score_micro': 0.8793333333333333, 'AUC_weighted': 0.9495382055857524, 'f1_score_micro': 0.8793333333333333, 'precision_score_micro': 0.8793333333333333, 'norm_macro_recall': 0.7587849182375793, 'AUC_micro': 0.9495382055857524, 'precision_score_weighted': 0.8795810094536645, 'accuracy_table': <class 'dict'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>, 'predict_time': <class 'float'>}.
+2019-04-12 13:44:32,402 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=4309.43[ms]
+2019-04-12 13:44:33,078 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][End fit_pipeline]memory usage 280158208
+2019-04-12 13:44:33,078 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][End fit_pipeline]child memory usage 280158208
+2019-04-12 13:44:33,082 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][End fit_pipeline]cpu time 27.875
+2019-04-12 13:44:33,082 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_0][End fit_pipeline]child cpu time 7.3125
+2019-04-12 13:44:33,082 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=17800.92 [ms]
+2019-04-12 13:44:33,378 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=19338.45 [ms]
+2019-04-12 13:44:33,378 - INFO - 569 : Start iteration: 1
+2019-04-12 13:44:33,378 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:44:33,382 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:44:33,382 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:44:34,087 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=704.97 [ms]
+2019-04-12 13:44:34,087 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [25, 75], "with_centering": true, "with_scaling": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.2977777777777778, "learning_rate": 0.1, "max_bin": 30, "max_depth": 5, "min_child_weight": 5, "min_data_in_leaf": 0.003457931034482759, "min_split_gain": 0.05263157894736842, "n_estimators": 200, "num_leaves": 176, "reg_alpha": 0.2631578947368421, "reg_lambda": 0, "subsample": 0.8415789473684211}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d8054ea3e9431d9a0bdb7c4a7ecafc7dcbdf9d17"}
+2019-04-12 13:44:34,559 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:44:34,563 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:44:34,563 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:44:34,563 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Starting fit_pipeline]memory usage 281108480
+2019-04-12 13:44:34,563 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Starting fit_pipeline]child memory usage 281108480
+2019-04-12 13:44:34,563 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Starting fit_pipeline]cpu time 28.296875
+2019-04-12 13:44:34,567 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Starting fit_pipeline]child cpu time 7.3125
+2019-04-12 13:44:34,711 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:44:34,711 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:44:34,711 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1
+2019-04-12 13:44:34,711 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before preprocess]memory usage 281128960
+2019-04-12 13:44:34,711 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before preprocess]child memory usage 281128960
+2019-04-12 13:44:34,715 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before preprocess]cpu time 28.4375
+2019-04-12 13:44:34,715 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before preprocess]child cpu time 7.3125
+2019-04-12 13:44:34,715 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After preprocess]memory usage 281128960
+2019-04-12 13:44:34,715 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After preprocess]child memory usage 281128960
+2019-04-12 13:44:34,715 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After preprocess]cpu time 28.4375
+2019-04-12 13:44:34,715 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After preprocess]child cpu time 7.3125
+2019-04-12 13:44:34,719 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before executing pipeline]memory usage 281128960
+2019-04-12 13:44:34,719 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before executing pipeline]child memory usage 281128960
+2019-04-12 13:44:34,719 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before executing pipeline]cpu time 28.4375
+2019-04-12 13:44:34,719 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][Before executing pipeline]child cpu time 7.3125
+2019-04-12 13:44:34,719 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [25, 75], "with_centering": true, "with_scaling": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.2977777777777778, "learning_rate": 0.1, "max_bin": 30, "max_depth": 5, "min_child_weight": 5, "min_data_in_leaf": 0.003457931034482759, "min_split_gain": 0.05263157894736842, "n_estimators": 200, "num_leaves": 176, "reg_alpha": 0.2631578947368421, "reg_lambda": 0, "subsample": 0.8415789473684211}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d8054ea3e9431d9a0bdb7c4a7ecafc7dcbdf9d17"}.
+2019-04-12 13:44:34,723 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:44:34,723 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:44:37,394 - INFO - 64 : memory usage 308477952
+2019-04-12 13:44:37,394 - INFO - 64 : child memory usage 364113920
+2019-04-12 13:44:37,394 - INFO - 73 : cpu time 28.671875
+2019-04-12 13:44:37,438 - INFO - 73 : child cpu time 8.3125
+2019-04-12 13:44:44,012 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:44:44,016 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:44:44,044 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:46,128 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2084.44[ms]
+2019-04-12 13:44:46,128 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:46,128 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:46,232 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=104.03[ms]
+2019-04-12 13:44:46,236 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:46,348 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=220.0[ms]
+2019-04-12 13:44:46,372 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:47,449 - INFO - 64 : memory usage 281391104
+2019-04-12 13:44:47,449 - INFO - 64 : child memory usage 547782656
+2019-04-12 13:44:47,449 - INFO - 73 : cpu time 28.765625
+2019-04-12 13:44:47,485 - INFO - 73 : child cpu time 14.84375
+2019-04-12 13:44:47,553 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1181.0[ms]
+2019-04-12 13:44:47,557 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:47,557 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:47,713 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=156.0[ms]
+2019-04-12 13:44:47,713 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:47,789 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=236.02[ms]
+2019-04-12 13:44:47,801 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:48,850 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1048.37[ms]
+2019-04-12 13:44:48,850 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:48,850 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:48,974 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=124.03[ms]
+2019-04-12 13:44:48,974 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:49,094 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=244.0[ms]
+2019-04-12 13:44:49,094 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=5078.14[ms]
+2019-04-12 13:44:49,098 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:44:49,102 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=4.0[ms]
+2019-04-12 13:44:49,102 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=5090.12[ms]
+2019-04-12 13:44:49,222 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:44:49,222 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:44:49,222 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:44:50,834 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1612.49[ms]
+2019-04-12 13:44:50,834 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:44:50,834 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:44:51,134 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=300.2[ms]
+2019-04-12 13:44:51,134 - INFO - 332 : Computing classification metrics
+2019-04-12 13:44:51,346 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=512.2[ms]
+2019-04-12 13:44:51,350 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=2128.68[ms]
+2019-04-12 13:44:51,350 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=2128.68[ms]
+2019-04-12 13:44:51,350 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=16627.27[ms]
+2019-04-12 13:44:51,350 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After executing pipeline]memory usage 282996736
+2019-04-12 13:44:51,350 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After executing pipeline]child memory usage 282996736
+2019-04-12 13:44:51,350 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After executing pipeline]cpu time 30.921875
+2019-04-12 13:44:51,350 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][After executing pipeline]child cpu time 17.046875
+2019-04-12 13:44:51,350 - INFO - 161 : Pipeline execution finished with a score of 0.9718982752428657
+2019-04-12 13:44:51,350 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:44:51,350 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:44:52,431 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:44:52,439 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:44:52,463 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:44:52,471 - INFO - 267 : The following metrics have been logged for the child run: {'norm_macro_recall': 0.8234703026357311, 'f1_score_macro': 0.9116900616985341, 'AUC_micro': 0.9718982752428657, 'weighted_accuracy': 0.911672285513097, 'precision_score_micro': 0.9117037037037038, 'accuracy': 0.9117037037037038, 'average_precision_score_micro': 0.9717478214659371, 'recall_score_macro': 0.9117351513178655, 'accuracy_table': <class 'dict'>, 'log_loss': 0.21591776516572891, 'AUC_macro': 0.9718982752428657, 'precision_score_weighted': 0.911790395368394, 'recall_score_weighted': 0.9117037037037038, 'AUC_weighted': 0.9718982752428657, 'f1_score_weighted': 0.9117043344454184, 'f1_score_micro': 0.9117037037037038, 'confusion_matrix': <class 'dict'>, 'balanced_accuracy': 0.9117351513178655, 'average_precision_score_macro': 0.9717478214659371, 'precision_score_macro': 0.9117304233748275, 'average_precision_score_weighted': 0.9717478214659371, 'recall_score_micro': 0.9117037037037038, 'predict_time': <class 'float'>, 'train time': <class 'float'>, 'fit_time': <class 'float'>}.
+2019-04-12 13:44:54,011 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2660.91[ms]
+2019-04-12 13:44:54,832 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][End fit_pipeline]memory usage 288448512
+2019-04-12 13:44:54,840 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][End fit_pipeline]child memory usage 288448512
+2019-04-12 13:44:54,840 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][End fit_pipeline]cpu time 33.015625
+2019-04-12 13:44:54,840 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_1][End fit_pipeline]child cpu time 17.046875
+2019-04-12 13:44:54,936 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=20377.0 [ms]
+2019-04-12 13:44:55,176 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=21798.04 [ms]
+2019-04-12 13:44:55,176 - INFO - 569 : Start iteration: 2
+2019-04-12 13:44:55,180 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:44:55,180 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:44:55,180 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:44:55,976 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=796.0 [ms]
+2019-04-12 13:44:55,976 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [10, 90], "with_centering": true, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LogisticRegression", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"C": 0.18420699693267145, "class_weight": "balanced", "multi_class": "multinomial", "penalty": "l2", "solver": "newton-cg"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "11056a6c6fc2e77b19946c6d65ae7b4f03e972f8"}
+2019-04-12 13:44:56,949 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:44:56,949 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:44:56,949 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:44:56,953 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Starting fit_pipeline]memory usage 288493568
+2019-04-12 13:44:56,953 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Starting fit_pipeline]child memory usage 288493568
+2019-04-12 13:44:56,953 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Starting fit_pipeline]cpu time 33.4375
+2019-04-12 13:44:56,953 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Starting fit_pipeline]child cpu time 17.046875
+2019-04-12 13:44:57,049 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:44:57,053 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:44:57,053 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2
+2019-04-12 13:44:57,053 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before preprocess]memory usage 288493568
+2019-04-12 13:44:57,105 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before preprocess]child memory usage 288493568
+2019-04-12 13:44:57,109 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before preprocess]cpu time 33.53125
+2019-04-12 13:44:57,113 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before preprocess]child cpu time 17.046875
+2019-04-12 13:44:57,113 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After preprocess]memory usage 288493568
+2019-04-12 13:44:57,113 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After preprocess]child memory usage 288493568
+2019-04-12 13:44:57,113 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After preprocess]cpu time 33.5625
+2019-04-12 13:44:57,113 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After preprocess]child cpu time 17.046875
+2019-04-12 13:44:57,113 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before executing pipeline]memory usage 288493568
+2019-04-12 13:44:57,117 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before executing pipeline]child memory usage 288493568
+2019-04-12 13:44:57,117 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before executing pipeline]cpu time 33.5625
+2019-04-12 13:44:57,117 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][Before executing pipeline]child cpu time 17.046875
+2019-04-12 13:44:57,117 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [10, 90], "with_centering": true, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LogisticRegression", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"C": 0.18420699693267145, "class_weight": "balanced", "multi_class": "multinomial", "penalty": "l2", "solver": "newton-cg"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "11056a6c6fc2e77b19946c6d65ae7b4f03e972f8"}.
+2019-04-12 13:44:57,117 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:44:57,117 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:44:57,545 - INFO - 64 : memory usage 288493568
+2019-04-12 13:44:57,545 - INFO - 64 : child memory usage 288497664
+2019-04-12 13:44:57,545 - INFO - 73 : cpu time 33.734375
+2019-04-12 13:44:57,549 - INFO - 73 : child cpu time 17.046875
+2019-04-12 13:45:04,043 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:04,043 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:45:04,075 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:07,116 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=3041.23[ms]
+2019-04-12 13:45:07,120 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:07,120 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:07,128 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=8.01[ms]
+2019-04-12 13:45:07,128 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:07,236 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=116.04[ms]
+2019-04-12 13:45:07,248 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:07,556 - INFO - 64 : memory usage 282247168
+2019-04-12 13:45:07,560 - INFO - 64 : child memory usage 537882624
+2019-04-12 13:45:07,576 - INFO - 73 : cpu time 33.765625
+2019-04-12 13:45:07,596 - INFO - 73 : child cpu time 25.828125
+2019-04-12 13:45:09,180 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1932.6[ms]
+2019-04-12 13:45:09,180 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:09,180 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:09,189 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=8.0[ms]
+2019-04-12 13:45:09,189 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:09,292 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=111.97[ms]
+2019-04-12 13:45:09,304 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:10,961 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1656.41[ms]
+2019-04-12 13:45:10,961 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:10,965 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:10,973 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=8.0[ms]
+2019-04-12 13:45:10,973 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:11,085 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=124.0[ms]
+2019-04-12 13:45:11,089 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=7046.19[ms]
+2019-04-12 13:45:11,093 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:45:11,093 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=0.0[ms]
+2019-04-12 13:45:11,097 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=7054.19[ms]
+2019-04-12 13:45:11,101 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:11,105 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:45:11,125 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:14,337 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=3212.38[ms]
+2019-04-12 13:45:14,341 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:14,341 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:14,385 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=44.0[ms]
+2019-04-12 13:45:14,385 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:14,581 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=240.0[ms]
+2019-04-12 13:45:14,581 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=3476.41[ms]
+2019-04-12 13:45:14,581 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3480.42[ms]
+2019-04-12 13:45:14,581 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=17464.67[ms]
+2019-04-12 13:45:14,581 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After executing pipeline]memory usage 298983424
+2019-04-12 13:45:14,581 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After executing pipeline]child memory usage 298983424
+2019-04-12 13:45:14,581 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After executing pipeline]cpu time 41.78125
+2019-04-12 13:45:14,581 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][After executing pipeline]child cpu time 34.296875
+2019-04-12 13:45:14,581 - INFO - 161 : Pipeline execution finished with a score of 0.9401335612847018
+2019-04-12 13:45:14,585 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:45:14,585 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:45:16,613 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:45:16,629 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:45:16,641 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:45:16,649 - INFO - 267 : The following metrics have been logged for the child run: {'recall_score_weighted': 0.8691851851851853, 'f1_score_weighted': 0.8691793647367213, 'accuracy': 0.8691851851851853, 'log_loss': 0.3213560139868272, 'average_precision_score_weighted': 0.9326286710251197, 'average_precision_score_micro': 0.9326286710251197, 'recall_score_macro': 0.8692755556420518, 'AUC_macro': 0.9401335612847018, 'accuracy_table': <class 'dict'>, 'AUC_micro': 0.9401335612847018, 'precision_score_micro': 0.8691851851851853, 'f1_score_macro': 0.8691678626588214, 'weighted_accuracy': 0.8690948931498751, 'confusion_matrix': <class 'dict'>, 'average_precision_score_macro': 0.9326286710251197, 'precision_score_macro': 0.8693406875072046, 'norm_macro_recall': 0.7385511112841036, 'recall_score_micro': 0.8691851851851853, 'precision_score_weighted': 0.8694540754623894, 'f1_score_micro': 0.8691851851851853, 'AUC_weighted': 0.9401335612847018, 'balanced_accuracy': 0.8692755556420518, 'train time': <class 'float'>, 'fit_time': <class 'float'>, 'predict_time': <class 'float'>}.
+2019-04-12 13:45:17,614 - INFO - 64 : memory usage 301801472
+2019-04-12 13:45:17,614 - INFO - 64 : child memory usage 301801472
+2019-04-12 13:45:17,614 - INFO - 73 : cpu time 43.359375
+2019-04-12 13:45:17,614 - INFO - 73 : child cpu time 34.296875
+2019-04-12 13:45:17,810 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=3224.63[ms]
+2019-04-12 13:45:18,782 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][End fit_pipeline]memory usage 301862912
+2019-04-12 13:45:18,786 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][End fit_pipeline]child memory usage 301862912
+2019-04-12 13:45:18,786 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][End fit_pipeline]cpu time 43.734375
+2019-04-12 13:45:18,786 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_2][End fit_pipeline]child cpu time 34.296875
+2019-04-12 13:45:18,790 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=21841.46 [ms]
+2019-04-12 13:45:19,050 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=23869.89 [ms]
+2019-04-12 13:45:19,050 - INFO - 569 : Start iteration: 3
+2019-04-12 13:45:19,054 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:45:19,054 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:45:19,058 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:45:19,754 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=700.27 [ms]
+2019-04-12 13:45:19,758 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "goss", "colsample_bytree": 0.1988888888888889, "learning_rate": 0.1, "max_bin": 220, "max_depth": 8, "min_child_weight": 6, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.9473684210526315, "n_estimators": 400, "num_leaves": 83, "reg_alpha": 0.47368421052631576, "reg_lambda": 0.894736842105263, "subsample": 1}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d513cd48c849cdb3a2ffb438591d5ccbc80eb722"}
+2019-04-12 13:45:20,302 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:45:20,306 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:45:20,306 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:45:20,310 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Starting fit_pipeline]memory usage 301756416
+2019-04-12 13:45:20,310 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Starting fit_pipeline]child memory usage 301756416
+2019-04-12 13:45:20,310 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Starting fit_pipeline]cpu time 44.296875
+2019-04-12 13:45:20,314 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Starting fit_pipeline]child cpu time 34.296875
+2019-04-12 13:45:20,470 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:45:20,470 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:45:20,470 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3
+2019-04-12 13:45:20,470 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before preprocess]memory usage 301768704
+2019-04-12 13:45:20,470 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before preprocess]child memory usage 301768704
+2019-04-12 13:45:20,470 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before preprocess]cpu time 44.4375
+2019-04-12 13:45:20,470 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before preprocess]child cpu time 34.296875
+2019-04-12 13:45:20,470 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After preprocess]memory usage 301768704
+2019-04-12 13:45:20,470 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After preprocess]child memory usage 301768704
+2019-04-12 13:45:20,470 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After preprocess]cpu time 44.4375
+2019-04-12 13:45:20,470 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After preprocess]child cpu time 34.296875
+2019-04-12 13:45:20,474 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before executing pipeline]memory usage 301776896
+2019-04-12 13:45:20,474 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before executing pipeline]child memory usage 301776896
+2019-04-12 13:45:20,474 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before executing pipeline]cpu time 44.4375
+2019-04-12 13:45:20,474 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][Before executing pipeline]child cpu time 34.296875
+2019-04-12 13:45:20,474 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "goss", "colsample_bytree": 0.1988888888888889, "learning_rate": 0.1, "max_bin": 220, "max_depth": 8, "min_child_weight": 6, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.9473684210526315, "n_estimators": 400, "num_leaves": 83, "reg_alpha": 0.47368421052631576, "reg_lambda": 0.894736842105263, "subsample": 1}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d513cd48c849cdb3a2ffb438591d5ccbc80eb722"}.
+2019-04-12 13:45:20,474 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:45:20,474 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:45:27,624 - INFO - 64 : memory usage 328814592
+2019-04-12 13:45:27,624 - INFO - 64 : child memory usage 516431872
+2019-04-12 13:45:27,648 - INFO - 73 : cpu time 44.59375
+2019-04-12 13:45:27,684 - INFO - 73 : child cpu time 37.703125
+2019-04-12 13:45:28,056 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:28,060 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:45:28,072 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:30,128 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2056.04[ms]
+2019-04-12 13:45:30,128 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:30,128 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:30,244 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=116.03[ms]
+2019-04-12 13:45:30,244 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:30,312 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=184.03[ms]
+2019-04-12 13:45:30,324 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:31,476 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1151.96[ms]
+2019-04-12 13:45:31,476 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:31,476 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:31,616 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=140.0[ms]
+2019-04-12 13:45:31,616 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:31,696 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=220.0[ms]
+2019-04-12 13:45:31,708 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:32,812 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1104.23[ms]
+2019-04-12 13:45:32,812 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:32,812 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:32,920 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=108.01[ms]
+2019-04-12 13:45:32,920 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:33,024 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=211.97[ms]
+2019-04-12 13:45:33,024 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=4964.29[ms]
+2019-04-12 13:45:33,028 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:45:33,028 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=0.0[ms]
+2019-04-12 13:45:33,028 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=4972.34[ms]
+2019-04-12 13:45:33,100 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:33,100 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:45:33,120 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:34,841 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1720.15[ms]
+2019-04-12 13:45:34,841 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:34,841 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:35,197 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=355.97[ms]
+2019-04-12 13:45:35,197 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:35,569 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=727.97[ms]
+2019-04-12 13:45:35,569 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=2468.08[ms]
+2019-04-12 13:45:35,569 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=2468.08[ms]
+2019-04-12 13:45:35,569 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=15094.14[ms]
+2019-04-12 13:45:35,573 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After executing pipeline]memory usage 303497216
+2019-04-12 13:45:35,573 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After executing pipeline]child memory usage 303497216
+2019-04-12 13:45:35,573 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After executing pipeline]cpu time 47.125
+2019-04-12 13:45:35,573 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][After executing pipeline]child cpu time 43.078125
+2019-04-12 13:45:35,573 - INFO - 161 : Pipeline execution finished with a score of 0.9578971076876824
+2019-04-12 13:45:35,573 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:45:35,573 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:45:36,517 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:45:36,529 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:45:36,541 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:45:36,545 - INFO - 267 : The following metrics have been logged for the child run: {'AUC_micro': 0.9578971076876824, 'precision_score_macro': 0.8928459086265974, 'log_loss': 0.26474202194374324, 'AUC_macro': 0.9578971076876824, 'confusion_matrix': <class 'dict'>, 'f1_score_macro': 0.8927158933438427, 'precision_score_micro': 0.8927407407407407, 'recall_score_macro': 0.8927540895449741, 'accuracy_table': <class 'dict'>, 'recall_score_weighted': 0.8927407407407407, 'f1_score_weighted': 0.8927346323989496, 'f1_score_micro': 0.8927407407407407, 'precision_score_weighted': 0.8928966671850018, 'average_precision_score_micro': 0.9581908083389513, 'accuracy': 0.8927407407407407, 'average_precision_score_macro': 0.9581908083389513, 'AUC_weighted': 0.9578971076876824, 'weighted_accuracy': 0.8927274191472797, 'average_precision_score_weighted': 0.9581908083389513, 'recall_score_micro': 0.8927407407407407, 'norm_macro_recall': 0.7855081790899482, 'balanced_accuracy': 0.8927540895449741, 'train time': <class 'float'>, 'fit_time': <class 'float'>, 'predict_time': <class 'float'>}.
+2019-04-12 13:45:37,685 - INFO - 64 : memory usage 307703808
+2019-04-12 13:45:37,685 - INFO - 64 : child memory usage 307707904
+2019-04-12 13:45:37,685 - INFO - 73 : cpu time 48.921875
+2019-04-12 13:45:37,685 - INFO - 73 : child cpu time 43.078125
+2019-04-12 13:45:38,130 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2557.21[ms]
+2019-04-12 13:45:38,850 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][End fit_pipeline]memory usage 308817920
+2019-04-12 13:45:38,854 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][End fit_pipeline]child memory usage 308817920
+2019-04-12 13:45:38,854 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][End fit_pipeline]cpu time 49.375
+2019-04-12 13:45:38,854 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_3][End fit_pipeline]child cpu time 43.078125
+2019-04-12 13:45:38,858 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=18555.34 [ms]
+2019-04-12 13:45:39,126 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=20075.87 [ms]
+2019-04-12 13:45:39,126 - INFO - 569 : Start iteration: 4
+2019-04-12 13:45:39,126 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:45:39,130 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:45:39,130 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:45:39,858 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=732.04 [ms]
+2019-04-12 13:45:39,858 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "MaxAbsScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.99, "learning_rate": 0.010535263157894737, "max_bin": 130, "max_depth": 7, "min_child_weight": 2, "min_data_in_leaf": 0.010353793103448278, "min_split_gain": 0.7368421052631579, "n_estimators": 100, "num_leaves": 191, "reg_alpha": 0.42105263157894735, "reg_lambda": 0.10526315789473684, "subsample": 0.09947368421052633}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "8eba028f162d46465047d1d8f3bee46b9c42a0a4"}
+2019-04-12 13:45:40,398 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:45:40,402 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:45:40,402 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:45:40,402 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Starting fit_pipeline]memory usage 308928512
+2019-04-12 13:45:40,402 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Starting fit_pipeline]child memory usage 308928512
+2019-04-12 13:45:40,406 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Starting fit_pipeline]cpu time 49.890625
+2019-04-12 13:45:40,406 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Starting fit_pipeline]child cpu time 43.078125
+2019-04-12 13:45:40,638 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:45:40,638 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:45:40,638 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4
+2019-04-12 13:45:40,638 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before preprocess]memory usage 309100544
+2019-04-12 13:45:40,638 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before preprocess]child memory usage 309100544
+2019-04-12 13:45:40,642 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before preprocess]cpu time 50.09375
+2019-04-12 13:45:40,642 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before preprocess]child cpu time 43.078125
+2019-04-12 13:45:40,642 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After preprocess]memory usage 309100544
+2019-04-12 13:45:40,642 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After preprocess]child memory usage 309100544
+2019-04-12 13:45:40,646 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After preprocess]cpu time 50.09375
+2019-04-12 13:45:40,646 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After preprocess]child cpu time 43.078125
+2019-04-12 13:45:40,646 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before executing pipeline]memory usage 309100544
+2019-04-12 13:45:40,650 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before executing pipeline]child memory usage 309100544
+2019-04-12 13:45:40,650 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before executing pipeline]cpu time 50.09375
+2019-04-12 13:45:40,650 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][Before executing pipeline]child cpu time 43.078125
+2019-04-12 13:45:40,650 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "MaxAbsScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.99, "learning_rate": 0.010535263157894737, "max_bin": 130, "max_depth": 7, "min_child_weight": 2, "min_data_in_leaf": 0.010353793103448278, "min_split_gain": 0.7368421052631579, "n_estimators": 100, "num_leaves": 191, "reg_alpha": 0.42105263157894735, "reg_lambda": 0.10526315789473684, "subsample": 0.09947368421052633}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "8eba028f162d46465047d1d8f3bee46b9c42a0a4"}.
+2019-04-12 13:45:40,650 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:45:40,654 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:45:47,695 - INFO - 64 : memory usage 336236544
+2019-04-12 13:45:47,695 - INFO - 64 : child memory usage 532312064
+2019-04-12 13:45:47,715 - INFO - 73 : cpu time 50.328125
+2019-04-12 13:45:47,739 - INFO - 73 : child cpu time 46.171875
+2019-04-12 13:45:47,919 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:47,923 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:45:47,935 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:51,134 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=3198.76[ms]
+2019-04-12 13:45:51,134 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:51,134 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:51,186 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=52.03[ms]
+2019-04-12 13:45:51,186 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:51,290 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=156.04[ms]
+2019-04-12 13:45:51,302 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:53,554 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2252.25[ms]
+2019-04-12 13:45:53,554 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:53,554 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:53,634 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=80.0[ms]
+2019-04-12 13:45:53,634 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:53,702 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=148.0[ms]
+2019-04-12 13:45:53,715 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:56,088 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2373.25[ms]
+2019-04-12 13:45:56,092 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:56,092 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:56,176 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=84.03[ms]
+2019-04-12 13:45:56,180 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:56,244 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=152.03[ms]
+2019-04-12 13:45:56,244 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=8320.3[ms]
+2019-04-12 13:45:56,248 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:45:56,252 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=3.97[ms]
+2019-04-12 13:45:56,252 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=8332.27[ms]
+2019-04-12 13:45:56,336 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:45:56,340 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:45:56,356 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:45:57,743 - INFO - 64 : memory usage 390840320
+2019-04-12 13:45:57,743 - INFO - 64 : child memory usage 390840320
+2019-04-12 13:45:57,743 - INFO - 73 : cpu time 51.71875
+2019-04-12 13:45:57,743 - INFO - 73 : child cpu time 54.765625
+2019-04-12 13:45:59,489 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=3133.12[ms]
+2019-04-12 13:45:59,489 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:45:59,489 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:45:59,685 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=196.0[ms]
+2019-04-12 13:45:59,685 - INFO - 332 : Computing classification metrics
+2019-04-12 13:45:59,861 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=372.0[ms]
+2019-04-12 13:45:59,861 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=3521.12[ms]
+2019-04-12 13:45:59,861 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3525.12[ms]
+2019-04-12 13:45:59,865 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=19206.84[ms]
+2019-04-12 13:45:59,865 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After executing pipeline]memory usage 308322304
+2019-04-12 13:45:59,865 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After executing pipeline]child memory usage 308322304
+2019-04-12 13:45:59,865 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After executing pipeline]cpu time 53.796875
+2019-04-12 13:45:59,865 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][After executing pipeline]child cpu time 54.765625
+2019-04-12 13:45:59,865 - INFO - 161 : Pipeline execution finished with a score of 0.9434241019731128
+2019-04-12 13:45:59,865 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:45:59,869 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:46:01,822 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:46:01,822 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:46:01,826 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:46:01,826 - INFO - 267 : The following metrics have been logged for the child run: {'log_loss': 0.4080053165493189, 'average_precision_score_weighted': 0.944004427309353, 'accuracy': 0.87, 'AUC_macro': 0.9434241019731128, 'recall_score_macro': 0.8701106592924273, 'f1_score_macro': 0.8699755510822001, 'f1_score_weighted': 0.8699843345628512, 'AUC_micro': 0.9434241019731128, 'recall_score_weighted': 0.87, 'accuracy_table': <class 'dict'>, 'balanced_accuracy': 0.8701106592924273, 'recall_score_micro': 0.87, 'average_precision_score_macro': 0.944004427309353, 'weighted_accuracy': 0.8698894365373008, 'norm_macro_recall': 0.7402213185848542, 'precision_score_micro': 0.87, 'AUC_weighted': 0.9434241019731128, 'precision_score_macro': 0.8702882390753303, 'f1_score_micro': 0.8700000000000001, 'precision_score_weighted': 0.8704165337731776, 'average_precision_score_micro': 0.944004427309353, 'confusion_matrix': <class 'dict'>, 'train time': <class 'float'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>}.
+2019-04-12 13:46:02,942 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=3073.31[ms]
+2019-04-12 13:46:03,987 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][End fit_pipeline]memory usage 313602048
+2019-04-12 13:46:03,987 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][End fit_pipeline]child memory usage 313602048
+2019-04-12 13:46:03,987 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][End fit_pipeline]cpu time 55.640625
+2019-04-12 13:46:03,991 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_4][End fit_pipeline]child cpu time 54.765625
+2019-04-12 13:46:03,991 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=23592.83 [ms]
+2019-04-12 13:46:04,291 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=25165.27 [ms]
+2019-04-12 13:46:04,291 - INFO - 569 : Start iteration: 5
+2019-04-12 13:46:04,291 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:46:04,295 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:46:04,295 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:46:05,027 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=732.23 [ms]
+2019-04-12 13:46:05,031 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "MinMaxScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.1988888888888889, "learning_rate": 0.06316157894736842, "max_bin": 220, "max_depth": 3, "min_child_weight": 0, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.42105263157894735, "n_estimators": 200, "num_leaves": 197, "reg_alpha": 0.15789473684210525, "reg_lambda": 0.42105263157894735, "subsample": 0.29736842105263156}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "c24af22c8afeebbe373fa1a82f792e1009306780"}
+2019-04-12 13:46:05,471 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:46:05,471 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:46:05,471 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:46:05,471 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Starting fit_pipeline]memory usage 313671680
+2019-04-12 13:46:05,471 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Starting fit_pipeline]child memory usage 313671680
+2019-04-12 13:46:05,471 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Starting fit_pipeline]cpu time 56.09375
+2019-04-12 13:46:05,475 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Starting fit_pipeline]child cpu time 54.765625
+2019-04-12 13:46:05,623 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:46:05,623 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:46:05,623 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5
+2019-04-12 13:46:05,623 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before preprocess]memory usage 313671680
+2019-04-12 13:46:05,623 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before preprocess]child memory usage 313671680
+2019-04-12 13:46:05,627 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before preprocess]cpu time 56.234375
+2019-04-12 13:46:05,627 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before preprocess]child cpu time 54.765625
+2019-04-12 13:46:05,627 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After preprocess]memory usage 313671680
+2019-04-12 13:46:05,627 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After preprocess]child memory usage 313671680
+2019-04-12 13:46:05,627 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After preprocess]cpu time 56.234375
+2019-04-12 13:46:05,627 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After preprocess]child cpu time 54.765625
+2019-04-12 13:46:05,631 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before executing pipeline]memory usage 313671680
+2019-04-12 13:46:05,631 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before executing pipeline]child memory usage 313671680
+2019-04-12 13:46:05,631 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before executing pipeline]cpu time 56.25
+2019-04-12 13:46:05,631 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][Before executing pipeline]child cpu time 54.765625
+2019-04-12 13:46:05,631 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "MinMaxScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.1988888888888889, "learning_rate": 0.06316157894736842, "max_bin": 220, "max_depth": 3, "min_child_weight": 0, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.42105263157894735, "n_estimators": 200, "num_leaves": 197, "reg_alpha": 0.15789473684210525, "reg_lambda": 0.42105263157894735, "subsample": 0.29736842105263156}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "c24af22c8afeebbe373fa1a82f792e1009306780"}.
+2019-04-12 13:46:05,631 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:46:05,635 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:46:07,747 - INFO - 64 : memory usage 340807680
+2019-04-12 13:46:07,747 - INFO - 64 : child memory usage 395575296
+2019-04-12 13:46:07,747 - INFO - 73 : cpu time 56.359375
+2019-04-12 13:46:07,747 - INFO - 73 : child cpu time 55.5625
+2019-04-12 13:46:12,236 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:12,240 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:46:12,268 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:14,024 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1756.32[ms]
+2019-04-12 13:46:14,024 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:14,028 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:14,092 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=64.0[ms]
+2019-04-12 13:46:14,092 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:14,192 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=168.03[ms]
+2019-04-12 13:46:14,204 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:14,936 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=732.0[ms]
+2019-04-12 13:46:14,936 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:14,936 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:15,000 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=64.03[ms]
+2019-04-12 13:46:15,004 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:15,108 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=172.27[ms]
+2019-04-12 13:46:15,120 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:15,980 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=859.99[ms]
+2019-04-12 13:46:15,980 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:15,980 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:16,048 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=68.03[ms]
+2019-04-12 13:46:16,048 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:16,152 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=172.12[ms]
+2019-04-12 13:46:16,152 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=3912.71[ms]
+2019-04-12 13:46:16,152 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:46:16,156 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=3.97[ms]
+2019-04-12 13:46:16,156 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3920.71[ms]
+2019-04-12 13:46:16,196 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:16,200 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:46:16,200 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:17,328 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1127.93[ms]
+2019-04-12 13:46:17,328 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:17,328 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:17,524 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=196.0[ms]
+2019-04-12 13:46:17,524 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:17,728 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=400.03[ms]
+2019-04-12 13:46:17,728 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=1527.96[ms]
+2019-04-12 13:46:17,728 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1531.95[ms]
+2019-04-12 13:46:17,728 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=12093.15[ms]
+2019-04-12 13:46:17,732 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After executing pipeline]memory usage 313126912
+2019-04-12 13:46:17,732 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After executing pipeline]child memory usage 313126912
+2019-04-12 13:46:17,732 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After executing pipeline]cpu time 57.859375
+2019-04-12 13:46:17,732 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][After executing pipeline]child cpu time 61.609375
+2019-04-12 13:46:17,732 - INFO - 161 : Pipeline execution finished with a score of 0.9594462460348071
+2019-04-12 13:46:17,732 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:46:17,732 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:46:17,752 - INFO - 64 : memory usage 313126912
+2019-04-12 13:46:17,752 - INFO - 64 : child memory usage 313131008
+2019-04-12 13:46:17,752 - INFO - 73 : cpu time 57.875
+2019-04-12 13:46:17,752 - INFO - 73 : child cpu time 61.609375
+2019-04-12 13:46:19,733 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:46:19,749 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:46:19,753 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:46:19,753 - INFO - 267 : The following metrics have been logged for the child run: {'f1_score_macro': 0.8924253423120133, 'balanced_accuracy': 0.8924987838314077, 'weighted_accuracy': 0.892390160092523, 'f1_score_weighted': 0.8924392071974938, 'norm_macro_recall': 0.7849975676628155, 'AUC_macro': 0.9594462460348071, 'f1_score_micro': 0.8924444444444445, 'precision_score_micro': 0.8924444444444445, 'recall_score_micro': 0.8924444444444445, 'accuracy_table': <class 'dict'>, 'precision_score_weighted': 0.8926613807104912, 'recall_score_weighted': 0.8924444444444445, 'accuracy': 0.8924444444444445, 'confusion_matrix': <class 'dict'>, 'average_precision_score_weighted': 0.9594305864737982, 'average_precision_score_micro': 0.9594305864737982, 'AUC_weighted': 0.9594462460348071, 'precision_score_macro': 0.8925793452675145, 'average_precision_score_macro': 0.9594305864737982, 'log_loss': 0.26738135373806254, 'recall_score_macro': 0.8924987838314077, 'AUC_micro': 0.9594462460348071, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-04-12 13:46:21,050 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=3317.15[ms]
+2019-04-12 13:46:21,834 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][End fit_pipeline]memory usage 313724928
+2019-04-12 13:46:21,834 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][End fit_pipeline]child memory usage 313724928
+2019-04-12 13:46:21,838 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][End fit_pipeline]cpu time 60.1875
+2019-04-12 13:46:21,838 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_5][End fit_pipeline]child cpu time 61.609375
+2019-04-12 13:46:21,842 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=16370.72 [ms]
+2019-04-12 13:46:22,127 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=17835.46 [ms]
+2019-04-12 13:46:22,131 - INFO - 569 : Start iteration: 6
+2019-04-12 13:46:22,131 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:46:22,131 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:46:22,131 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:46:22,943 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=812.0 [ms]
+2019-04-12 13:46:22,947 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.3966666666666666, "learning_rate": 0.06316157894736842, "max_bin": 60, "max_depth": 4, "min_child_weight": 4, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.05263157894736842, "n_estimators": 100, "num_leaves": 188, "reg_alpha": 0.8421052631578947, "reg_lambda": 0.8421052631578947, "subsample": 0.49526315789473685}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "032781f2519ff8d9b4396dc0b10514c192def489"}
+2019-04-12 13:46:23,451 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:46:23,451 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:46:23,451 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:46:23,451 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Starting fit_pipeline]memory usage 313823232
+2019-04-12 13:46:23,451 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Starting fit_pipeline]child memory usage 313823232
+2019-04-12 13:46:23,455 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Starting fit_pipeline]cpu time 60.6875
+2019-04-12 13:46:23,455 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Starting fit_pipeline]child cpu time 61.609375
+2019-04-12 13:46:23,535 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:46:23,535 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:46:23,535 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6
+2019-04-12 13:46:23,539 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before preprocess]memory usage 313823232
+2019-04-12 13:46:23,539 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before preprocess]child memory usage 313823232
+2019-04-12 13:46:23,539 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before preprocess]cpu time 60.78125
+2019-04-12 13:46:23,539 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before preprocess]child cpu time 61.609375
+2019-04-12 13:46:23,539 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After preprocess]memory usage 313823232
+2019-04-12 13:46:23,539 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After preprocess]child memory usage 313823232
+2019-04-12 13:46:23,539 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After preprocess]cpu time 60.78125
+2019-04-12 13:46:23,543 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After preprocess]child cpu time 61.609375
+2019-04-12 13:46:23,543 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before executing pipeline]memory usage 313823232
+2019-04-12 13:46:23,543 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before executing pipeline]child memory usage 313823232
+2019-04-12 13:46:23,543 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before executing pipeline]cpu time 60.78125
+2019-04-12 13:46:23,543 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][Before executing pipeline]child cpu time 61.609375
+2019-04-12 13:46:23,543 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.3966666666666666, "learning_rate": 0.06316157894736842, "max_bin": 60, "max_depth": 4, "min_child_weight": 4, "min_data_in_leaf": 0.05517689655172415, "min_split_gain": 0.05263157894736842, "n_estimators": 100, "num_leaves": 188, "reg_alpha": 0.8421052631578947, "reg_lambda": 0.8421052631578947, "subsample": 0.49526315789473685}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "032781f2519ff8d9b4396dc0b10514c192def489"}.
+2019-04-12 13:46:23,543 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:46:23,547 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:46:27,756 - INFO - 64 : memory usage 340799488
+2019-04-12 13:46:27,756 - INFO - 64 : child memory usage 395681792
+2019-04-12 13:46:27,756 - INFO - 73 : cpu time 61.015625
+2019-04-12 13:46:27,792 - INFO - 73 : child cpu time 63.140625
+2019-04-12 13:46:36,307 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:36,311 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:46:36,355 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:37,802 - INFO - 64 : memory usage 313757696
+2019-04-12 13:46:37,802 - INFO - 64 : child memory usage 593514496
+2019-04-12 13:46:37,814 - INFO - 73 : cpu time 61.125
+2019-04-12 13:46:37,834 - INFO - 73 : child cpu time 68.40625
+2019-04-12 13:46:37,966 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1610.14[ms]
+2019-04-12 13:46:37,966 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:37,966 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:38,010 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=44.03[ms]
+2019-04-12 13:46:38,010 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:38,086 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=116.04[ms]
+2019-04-12 13:46:38,098 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:38,682 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=584.45[ms]
+2019-04-12 13:46:38,682 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:38,682 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:38,730 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=48.03[ms]
+2019-04-12 13:46:38,730 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:38,798 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=116.0[ms]
+2019-04-12 13:46:38,810 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:39,434 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=624.41[ms]
+2019-04-12 13:46:39,434 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:39,434 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:39,478 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=44.03[ms]
+2019-04-12 13:46:39,478 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:39,546 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=112.03[ms]
+2019-04-12 13:46:39,546 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=3235.06[ms]
+2019-04-12 13:46:39,546 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:46:39,550 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=3.97[ms]
+2019-04-12 13:46:39,550 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3243.03[ms]
+2019-04-12 13:46:39,582 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:39,582 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:46:39,582 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:40,510 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=928.0[ms]
+2019-04-12 13:46:40,510 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:40,510 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:40,646 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=136.02[ms]
+2019-04-12 13:46:40,646 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:40,822 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=312.03[ms]
+2019-04-12 13:46:40,822 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=1240.03[ms]
+2019-04-12 13:46:40,822 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1240.03[ms]
+2019-04-12 13:46:40,822 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=17275.1[ms]
+2019-04-12 13:46:40,822 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After executing pipeline]memory usage 309993472
+2019-04-12 13:46:40,822 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After executing pipeline]child memory usage 309993472
+2019-04-12 13:46:40,822 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After executing pipeline]cpu time 62.359375
+2019-04-12 13:46:40,826 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][After executing pipeline]child cpu time 70.453125
+2019-04-12 13:46:40,826 - INFO - 161 : Pipeline execution finished with a score of 0.9564518510408035
+2019-04-12 13:46:40,826 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:46:40,826 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:46:41,759 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:46:41,767 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:46:41,767 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:46:41,767 - INFO - 267 : The following metrics have been logged for the child run: {'weighted_accuracy': 0.8880112437719615, 'f1_score_weighted': 0.8880660288517722, 'AUC_micro': 0.9564518510408035, 'precision_score_macro': 0.8882541488884467, 'precision_score_weighted': 0.8883430717004929, 'AUC_weighted': 0.9564518510408035, 'average_precision_score_micro': 0.9560762990153583, 'accuracy': 0.8880740740740741, 'recall_score_macro': 0.8881369661653945, 'confusion_matrix': <class 'dict'>, 'norm_macro_recall': 0.7762739323307889, 'balanced_accuracy': 0.8881369661653945, 'log_loss': 0.2828280847548035, 'f1_score_micro': 0.8880740740740741, 'average_precision_score_macro': 0.9560762990153583, 'average_precision_score_weighted': 0.9560762990153583, 'AUC_macro': 0.9564518510408035, 'f1_score_macro': 0.888053001608322, 'precision_score_micro': 0.8880740740740741, 'recall_score_weighted': 0.8880740740740741, 'accuracy_table': <class 'dict'>, 'recall_score_micro': 0.8880740740740741, 'fit_time': <class 'float'>, 'train time': <class 'float'>, 'predict_time': <class 'float'>}.
+2019-04-12 13:46:43,047 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2220.92[ms]
+2019-04-12 13:46:44,612 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][End fit_pipeline]memory usage 311914496
+2019-04-12 13:46:44,616 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][End fit_pipeline]child memory usage 311914496
+2019-04-12 13:46:44,616 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][End fit_pipeline]cpu time 64.265625
+2019-04-12 13:46:44,616 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_6][End fit_pipeline]child cpu time 70.453125
+2019-04-12 13:46:44,620 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=21168.8 [ms]
+2019-04-12 13:46:45,269 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=23138.42 [ms]
+2019-04-12 13:46:45,273 - INFO - 569 : Start iteration: 7
+2019-04-12 13:46:45,273 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:46:45,277 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:46:45,277 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:46:46,385 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=1108.0 [ms]
+2019-04-12 13:46:46,389 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "MinMaxScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LogisticRegression", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"C": 11.513953993264458, "class_weight": "balanced", "multi_class": "multinomial", "penalty": "l2", "solver": "lbfgs"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "5ed870da122623662e7000846b3d9e98b876210d"}
+2019-04-12 13:46:46,965 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:46:46,965 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:46:46,965 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:46:46,965 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Starting fit_pipeline]memory usage 311918592
+2019-04-12 13:46:46,965 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Starting fit_pipeline]child memory usage 311918592
+2019-04-12 13:46:46,965 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Starting fit_pipeline]cpu time 64.78125
+2019-04-12 13:46:46,969 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Starting fit_pipeline]child cpu time 70.453125
+2019-04-12 13:46:47,057 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:46:47,057 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:46:47,057 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7
+2019-04-12 13:46:47,057 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before preprocess]memory usage 311918592
+2019-04-12 13:46:47,057 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before preprocess]child memory usage 311918592
+2019-04-12 13:46:47,057 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before preprocess]cpu time 64.875
+2019-04-12 13:46:47,061 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before preprocess]child cpu time 70.453125
+2019-04-12 13:46:47,061 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After preprocess]memory usage 311918592
+2019-04-12 13:46:47,061 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After preprocess]child memory usage 311918592
+2019-04-12 13:46:47,061 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After preprocess]cpu time 64.875
+2019-04-12 13:46:47,061 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After preprocess]child cpu time 70.453125
+2019-04-12 13:46:47,061 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before executing pipeline]memory usage 311918592
+2019-04-12 13:46:47,065 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before executing pipeline]child memory usage 311918592
+2019-04-12 13:46:47,065 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before executing pipeline]cpu time 64.875
+2019-04-12 13:46:47,065 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][Before executing pipeline]child cpu time 70.453125
+2019-04-12 13:46:47,065 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "MinMaxScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LogisticRegression", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"C": 11.513953993264458, "class_weight": "balanced", "multi_class": "multinomial", "penalty": "l2", "solver": "lbfgs"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "5ed870da122623662e7000846b3d9e98b876210d"}.
+2019-04-12 13:46:47,065 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:46:47,065 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:46:47,838 - INFO - 64 : memory usage 338984960
+2019-04-12 13:46:47,838 - INFO - 64 : child memory usage 365993984
+2019-04-12 13:46:47,838 - INFO - 73 : cpu time 65.0625
+2019-04-12 13:46:47,838 - INFO - 73 : child cpu time 70.703125
+2019-04-12 13:46:53,279 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:53,283 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:46:53,295 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:55,024 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1728.2[ms]
+2019-04-12 13:46:55,024 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:55,024 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:55,036 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=12.0[ms]
+2019-04-12 13:46:55,036 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:55,112 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=88.0[ms]
+2019-04-12 13:46:55,124 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:56,677 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1552.86[ms]
+2019-04-12 13:46:56,677 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:56,677 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:56,685 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=8.0[ms]
+2019-04-12 13:46:56,685 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:56,801 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=124.0[ms]
+2019-04-12 13:46:56,817 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:57,470 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=653.52[ms]
+2019-04-12 13:46:57,474 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:57,474 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:57,482 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=8.0[ms]
+2019-04-12 13:46:57,482 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:57,554 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=80.0[ms]
+2019-04-12 13:46:57,554 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=4270.57[ms]
+2019-04-12 13:46:57,558 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:46:57,562 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=4.0[ms]
+2019-04-12 13:46:57,562 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=4282.57[ms]
+2019-04-12 13:46:57,570 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:46:57,570 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:46:57,574 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:46:57,838 - INFO - 64 : memory usage 325746688
+2019-04-12 13:46:57,838 - INFO - 64 : child memory usage 542605312
+2019-04-12 13:46:57,838 - INFO - 73 : cpu time 65.390625
+2019-04-12 13:46:57,838 - INFO - 73 : child cpu time 78.859375
+2019-04-12 13:46:59,143 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1569.0[ms]
+2019-04-12 13:46:59,143 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:46:59,143 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:46:59,211 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=68.0[ms]
+2019-04-12 13:46:59,211 - INFO - 332 : Computing classification metrics
+2019-04-12 13:46:59,475 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=332.0[ms]
+2019-04-12 13:46:59,479 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=1909.01[ms]
+2019-04-12 13:46:59,479 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1909.01[ms]
+2019-04-12 13:46:59,479 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=12413.95[ms]
+2019-04-12 13:46:59,479 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After executing pipeline]memory usage 312815616
+2019-04-12 13:46:59,479 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After executing pipeline]child memory usage 312815616
+2019-04-12 13:46:59,479 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After executing pipeline]cpu time 67.625
+2019-04-12 13:46:59,479 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][After executing pipeline]child cpu time 79.0625
+2019-04-12 13:46:59,483 - INFO - 161 : Pipeline execution finished with a score of 0.9398615080600554
+2019-04-12 13:46:59,483 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:46:59,483 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:47:00,378 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:47:00,386 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:47:00,410 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:47:00,426 - INFO - 267 : The following metrics have been logged for the child run: {'norm_macro_recall': 0.7387220288511266, 'accuracy_table': <class 'dict'>, 'AUC_weighted': 0.9398615080600554, 'average_precision_score_micro': 0.9319100960067622, 'accuracy': 0.8692592592592593, 'confusion_matrix': <class 'dict'>, 'AUC_micro': 0.9398615080600554, 'recall_score_micro': 0.8692592592592593, 'AUC_macro': 0.9398615080600554, 'average_precision_score_weighted': 0.9319100960067622, 'recall_score_weighted': 0.8692592592592593, 'f1_score_weighted': 0.869251993197417, 'precision_score_macro': 0.8694410434178778, 'precision_score_micro': 0.8692592592592593, 'average_precision_score_macro': 0.9319100960067622, 'recall_score_macro': 0.8693610144255633, 'f1_score_micro': 0.8692592592592593, 'precision_score_weighted': 0.8695626689102807, 'f1_score_macro': 0.8692420750782159, 'log_loss': 0.32074280378563963, 'balanced_accuracy': 0.8693610144255633, 'weighted_accuracy': 0.8691575908146086, 'fit_time': <class 'float'>, 'predict_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-04-12 13:47:01,982 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2498.57[ms]
+2019-04-12 13:47:03,407 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][End fit_pipeline]memory usage 316727296
+2019-04-12 13:47:03,407 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][End fit_pipeline]child memory usage 316727296
+2019-04-12 13:47:03,407 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][End fit_pipeline]cpu time 68.75
+2019-04-12 13:47:03,407 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_7][End fit_pipeline]child cpu time 79.0625
+2019-04-12 13:47:03,407 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=16441.62 [ms]
+2019-04-12 13:47:03,731 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=18457.62 [ms]
+2019-04-12 13:47:03,731 - INFO - 569 : Start iteration: 8
+2019-04-12 13:47:03,731 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:47:03,731 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:47:03,731 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:47:04,711 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=980.0 [ms]
+2019-04-12 13:47:04,715 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "goss", "colsample_bytree": 0.2977777777777778, "learning_rate": 0.07368684210526316, "max_bin": 320, "max_depth": 6, "min_child_weight": 5, "min_data_in_leaf": 0.08620827586206897, "min_split_gain": 0.894736842105263, "n_estimators": 100, "num_leaves": 26, "reg_alpha": 0.7894736842105263, "reg_lambda": 0.894736842105263, "subsample": 1}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "58580d9785db94aed1ee068cbc4be07decc96205"}
+2019-04-12 13:47:05,195 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:47:05,195 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:47:05,199 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:47:05,199 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Starting fit_pipeline]memory usage 311386112
+2019-04-12 13:47:05,199 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Starting fit_pipeline]child memory usage 311386112
+2019-04-12 13:47:05,199 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Starting fit_pipeline]cpu time 69.015625
+2019-04-12 13:47:05,199 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Starting fit_pipeline]child cpu time 79.0625
+2019-04-12 13:47:05,287 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:47:05,287 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:47:05,287 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8
+2019-04-12 13:47:05,287 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before preprocess]memory usage 311386112
+2019-04-12 13:47:05,339 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before preprocess]child memory usage 311386112
+2019-04-12 13:47:05,347 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before preprocess]cpu time 69.09375
+2019-04-12 13:47:05,347 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before preprocess]child cpu time 79.0625
+2019-04-12 13:47:05,347 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After preprocess]memory usage 311398400
+2019-04-12 13:47:05,351 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After preprocess]child memory usage 311398400
+2019-04-12 13:47:05,351 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After preprocess]cpu time 69.125
+2019-04-12 13:47:05,351 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After preprocess]child cpu time 79.0625
+2019-04-12 13:47:05,351 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before executing pipeline]memory usage 311398400
+2019-04-12 13:47:05,351 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before executing pipeline]child memory usage 311398400
+2019-04-12 13:47:05,355 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before executing pipeline]cpu time 69.140625
+2019-04-12 13:47:05,355 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][Before executing pipeline]child cpu time 79.0625
+2019-04-12 13:47:05,355 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMClassifier", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "goss", "colsample_bytree": 0.2977777777777778, "learning_rate": 0.07368684210526316, "max_bin": 320, "max_depth": 6, "min_child_weight": 5, "min_data_in_leaf": 0.08620827586206897, "min_split_gain": 0.894736842105263, "n_estimators": 100, "num_leaves": 26, "reg_alpha": 0.7894736842105263, "reg_lambda": 0.894736842105263, "subsample": 1}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "58580d9785db94aed1ee068cbc4be07decc96205"}.
+2019-04-12 13:47:05,355 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:47:05,355 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:47:07,844 - INFO - 64 : memory usage 338554880
+2019-04-12 13:47:07,844 - INFO - 64 : child memory usage 397963264
+2019-04-12 13:47:07,855 - INFO - 73 : cpu time 69.296875
+2019-04-12 13:47:07,875 - INFO - 73 : child cpu time 80.09375
+2019-04-12 13:47:11,768 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:47:11,768 - INFO - 140 : ActivityStarted: RunCV
+2019-04-12 13:47:11,784 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:47:13,264 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1480.14[ms]
+2019-04-12 13:47:13,264 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:13,264 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:13,296 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=32.0[ms]
+2019-04-12 13:47:13,296 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:13,432 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=168.0[ms]
+2019-04-12 13:47:13,444 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:47:13,984 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=540.0[ms]
+2019-04-12 13:47:13,984 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:13,984 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:14,020 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=36.0[ms]
+2019-04-12 13:47:14,020 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:14,088 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=104.0[ms]
+2019-04-12 13:47:14,104 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:47:14,604 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=500.12[ms]
+2019-04-12 13:47:14,604 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:14,604 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:14,636 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=32.04[ms]
+2019-04-12 13:47:14,636 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:14,736 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=132.0[ms]
+2019-04-12 13:47:14,740 - INFO - 154 : ActivityCompleted: Activity=RunCV, HowEnded=Success, Duration=2968.3[ms]
+2019-04-12 13:47:14,740 - INFO - 140 : ActivityStarted: RunCVMean
+2019-04-12 13:47:14,744 - INFO - 154 : ActivityCompleted: Activity=RunCVMean, HowEnded=Success, Duration=4.0[ms]
+2019-04-12 13:47:14,744 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=2976.3[ms]
+2019-04-12 13:47:14,764 - INFO - 140 : ActivityStarted: Run
+2019-04-12 13:47:14,768 - INFO - 140 : ActivityStarted: TrainFull
+2019-04-12 13:47:14,780 - INFO - 140 : ActivityStarted: TimeFit
+2019-04-12 13:47:15,700 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=916.0[ms]
+2019-04-12 13:47:15,700 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:15,700 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:15,832 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=128.0[ms]
+2019-04-12 13:47:15,832 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:16,012 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=312.04[ms]
+2019-04-12 13:47:16,012 - INFO - 154 : ActivityCompleted: Activity=TrainFull, HowEnded=Success, Duration=1244.03[ms]
+2019-04-12 13:47:16,012 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1248.0[ms]
+2019-04-12 13:47:16,012 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=10656.89[ms]
+2019-04-12 13:47:16,012 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After executing pipeline]memory usage 309399552
+2019-04-12 13:47:16,012 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After executing pipeline]child memory usage 309399552
+2019-04-12 13:47:16,012 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After executing pipeline]cpu time 70.609375
+2019-04-12 13:47:16,016 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][After executing pipeline]child cpu time 85.21875
+2019-04-12 13:47:16,016 - INFO - 161 : Pipeline execution finished with a score of 0.933832467666789
+2019-04-12 13:47:16,016 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:47:16,016 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:47:16,968 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-04-12 13:47:16,992 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-04-12 13:47:16,996 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:47:17,036 - INFO - 267 : The following metrics have been logged for the child run: {'f1_score_macro': 0.8615249818260602, 'log_loss': 0.3583839953682872, 'precision_score_macro': 0.8617043731149314, 'precision_score_weighted': 0.8617760226220614, 'AUC_macro': 0.933832467666789, 'precision_score_micro': 0.8615555555555555, 'average_precision_score_macro': 0.9324664407096149, 'f1_score_micro': 0.8615555555555555, 'recall_score_weighted': 0.8615555555555555, 'recall_score_micro': 0.8615555555555555, 'confusion_matrix': <class 'dict'>, 'accuracy_table': <class 'dict'>, 'accuracy': 0.8615555555555555, 'f1_score_weighted': 0.8615450441446089, 'average_precision_score_micro': 0.9324664407096149, 'average_precision_score_weighted': 0.9324664407096149, 'norm_macro_recall': 0.7231742722432034, 'AUC_weighted': 0.933832467666789, 'recall_score_macro': 0.8615871361216018, 'balanced_accuracy': 0.8615871361216018, 'weighted_accuracy': 0.861524016211311, 'AUC_micro': 0.933832467666789, 'fit_time': <class 'float'>, 'train time': <class 'float'>, 'predict_time': <class 'float'>}.
+2019-04-12 13:47:17,892 - INFO - 64 : memory usage 314212352
+2019-04-12 13:47:17,892 - INFO - 64 : child memory usage 314216448
+2019-04-12 13:47:17,892 - INFO - 73 : cpu time 71.9375
+2019-04-12 13:47:17,892 - INFO - 73 : child cpu time 85.21875
+2019-04-12 13:47:18,312 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2296.09[ms]
+2019-04-12 13:47:19,132 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][End fit_pipeline]memory usage 314023936
+2019-04-12 13:47:19,136 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][End fit_pipeline]child memory usage 314023936
+2019-04-12 13:47:19,136 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][End fit_pipeline]cpu time 72.328125
+2019-04-12 13:47:19,136 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_8][End fit_pipeline]child cpu time 85.21875
+2019-04-12 13:47:19,136 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=13940.98 [ms]
+2019-04-12 13:47:19,733 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=16002.12 [ms]
+2019-04-12 13:47:19,733 - INFO - 569 : Start iteration: 9
+2019-04-12 13:47:19,733 - INFO - 93 : ActivityStarted, FitIteration
+2019-04-12 13:47:19,733 - INFO - 93 : ActivityStarted, GetPipeline
+2019-04-12 13:47:19,733 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-04-12 13:47:20,453 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=716.04 [ms]
+2019-04-12 13:47:20,453 - INFO - 612 : Received pipeline: {"pipeline_id":"__AutoML_Ensemble__","objects":[{"module":"azureml.train.automl.ensemble","class_name":"Ensemble","spec_class":"sklearn","param_args":[],"param_kwargs":{"automl_settings":"{'name': 'simple_classification', 'path': './simple_classification_project', 'subscription_id': 'a989cac4-671d-45c6-9d2b-ea7e9d936600', 'resource_group': 'AmherstRG', 'workspace_name': 'AmherstWorkspace', 'iterations': 10, 'primary_metric': 'AUC_weighted', 'data_script': None, 'compute_target': 'local', 'task_type': 'classification', 'validation_size': 0.0, 'n_cross_validations': 3, 'y_min': None, 'y_max': None, 'num_classes': 2, 'preprocess': False, 'lag_length': 0, 'is_timeseries': False, 'max_cores_per_iteration': 1, 'max_concurrent_iterations': 1, 'iteration_timeout_minutes': 60, 'mem_in_mb': None, 'enforce_time_on_windows': True, 'experiment_timeout_minutes': None, 'experiment_exit_score': None, 'whitelist_models': None, 'blacklist_algos': ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM'], 'auto_blacklist': True, 'blacklist_samples_reached': True, 'exclude_nan_labels': True, 'verbosity': 20, 'debug_log': 'automl_errors.log', 'show_warnings': False, 'model_explainability': False, 'service_url': None, 'sdk_url': None, 'sdk_packages': None, 'telemetry_verbosity': 'INFO', 'send_telemetry': True, 'spark_service': None, 'metrics': None, 'enable_ensembling': True, 'ensemble_iterations': 10, 'enable_tf': True, 'enable_cache': True, 'enable_subsampling': False, 'subsample_seed': None, 'cost_mode': 0, 'metric_operation': 'maximize'}","ensemble_run_id":"AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9","experiment_name":"simple_classification","workspace_name":"AmherstWorkspace","subscription_id":"a989cac4-671d-45c6-9d2b-ea7e9d936600","resource_group_name":"AmherstRG"}}]}
+2019-04-12 13:47:21,574 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-04-12 13:47:21,574 - INFO - 180 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9]CPU logical cores: 4, CPU cores: 2, virtual memory: 8434102272, swap memory: 16868204544.
+2019-04-12 13:47:21,578 - INFO - 186 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9]Platform information: Windows-10-10.0.17134-SP0.
+2019-04-12 13:47:21,578 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Starting fit_pipeline]memory usage 314019840
+2019-04-12 13:47:21,578 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Starting fit_pipeline]child memory usage 314019840
+2019-04-12 13:47:21,578 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Starting fit_pipeline]cpu time 72.8125
+2019-04-12 13:47:21,578 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Starting fit_pipeline]child cpu time 85.21875
+2019-04-12 13:47:21,722 - INFO - 72 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9] X datatype is <class 'numpy.ndarray'>, shape is (13500, 124), datasize is 13392112.
+2019-04-12 13:47:21,722 - INFO - 77 : [ParentRunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9] y datatype is <class 'numpy.ndarray'>, shape is (13500,), datasize is 108096.
+2019-04-12 13:47:21,722 - INFO - 93 : Using child run AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9
+2019-04-12 13:47:21,722 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before preprocess]memory usage 314028032
+2019-04-12 13:47:21,722 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before preprocess]child memory usage 314028032
+2019-04-12 13:47:21,722 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before preprocess]cpu time 72.9375
+2019-04-12 13:47:21,722 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before preprocess]child cpu time 85.21875
+2019-04-12 13:47:21,726 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After preprocess]memory usage 314028032
+2019-04-12 13:47:21,726 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After preprocess]child memory usage 314028032
+2019-04-12 13:47:21,726 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After preprocess]cpu time 72.9375
+2019-04-12 13:47:21,726 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After preprocess]child cpu time 85.21875
+2019-04-12 13:47:21,726 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before executing pipeline]memory usage 314028032
+2019-04-12 13:47:21,726 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before executing pipeline]child memory usage 314028032
+2019-04-12 13:47:21,726 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before executing pipeline]cpu time 72.9375
+2019-04-12 13:47:21,726 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][Before executing pipeline]child cpu time 85.21875
+2019-04-12 13:47:21,726 - INFO - 141 : Start executing pipeline {"pipeline_id":"__AutoML_Ensemble__","objects":[{"module":"azureml.train.automl.ensemble","class_name":"Ensemble","spec_class":"sklearn","param_args":[],"param_kwargs":{"automl_settings":"{'name': 'simple_classification', 'path': './simple_classification_project', 'subscription_id': 'a989cac4-671d-45c6-9d2b-ea7e9d936600', 'resource_group': 'AmherstRG', 'workspace_name': 'AmherstWorkspace', 'iterations': 10, 'primary_metric': 'AUC_weighted', 'data_script': None, 'compute_target': 'local', 'task_type': 'classification', 'validation_size': 0.0, 'n_cross_validations': 3, 'y_min': None, 'y_max': None, 'num_classes': 2, 'preprocess': False, 'lag_length': 0, 'is_timeseries': False, 'max_cores_per_iteration': 1, 'max_concurrent_iterations': 1, 'iteration_timeout_minutes': 60, 'mem_in_mb': None, 'enforce_time_on_windows': True, 'experiment_timeout_minutes': None, 'experiment_exit_score': None, 'whitelist_models': None, 'blacklist_algos': ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM'], 'auto_blacklist': True, 'blacklist_samples_reached': True, 'exclude_nan_labels': True, 'verbosity': 20, 'debug_log': 'automl_errors.log', 'show_warnings': False, 'model_explainability': False, 'service_url': None, 'sdk_url': None, 'sdk_packages': None, 'telemetry_verbosity': 'INFO', 'send_telemetry': True, 'spark_service': None, 'metrics': None, 'enable_ensembling': True, 'ensemble_iterations': 10, 'enable_tf': True, 'enable_cache': True, 'enable_subsampling': False, 'subsample_seed': None, 'cost_mode': 0, 'metric_operation': 'maximize'}","ensemble_run_id":"AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9","experiment_name":"simple_classification","workspace_name":"AmherstWorkspace","subscription_id":"a989cac4-671d-45c6-9d2b-ea7e9d936600","resource_group_name":"AmherstRG"}}]}.
+2019-04-12 13:47:21,726 - INFO - 143 : Running with the following AutoML settings:
+ - name: simple_classification
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: local
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: 2
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 60
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize
+2019-04-12 13:47:21,726 - INFO - 224 : ActivityStarted: RunPipeline
+2019-04-12 13:47:27,896 - INFO - 64 : memory usage 341291008
+2019-04-12 13:47:27,896 - INFO - 64 : child memory usage 526012416
+2019-04-12 13:47:27,916 - INFO - 73 : cpu time 73.109375
+2019-04-12 13:47:27,940 - INFO - 73 : child cpu time 87.765625
+2019-04-12 13:47:28,480 - INFO - 140 : ActivityStarted: RunEnsembling
+2019-04-12 13:47:28,900 - INFO - 140 : ActivityStarted: TimeFitEnsemble
+2019-04-12 13:47:33,470 - INFO - 167 : Fetching fitted models for best 9 previous iterations
+2019-04-12 13:47:33,478 - INFO - 224 : ActivityStarted: DownloadEnsemblingModels
+2019-04-12 13:47:34,568 - INFO - 238 : ActivityCompleted: Activity=DownloadEnsemblingModels, HowEnded=Success, Duration=1089.95[ms]
+2019-04-12 13:47:36,231 - INFO - 89 : Fetched 9 fitted pipelines in 4 seconds
+2019-04-12 13:47:37,775 - INFO - 102 : Single models scores: [0.94013356 0.93986151 0.93383247 0.95944625 0.95645185 0.94953821
+ 0.97189828 0.95789711 0.9434241 ]
+2019-04-12 13:47:37,783 - INFO - 134 : Starting ensemble hill climbing. Current ensemble: [0, 1, 2, 3, 4], current score: 0.9547733237041718
+2019-04-12 13:47:37,883 - INFO - 168 : Iteration 0, new best ensemble: [0, 1, 2, 3, 4, 6], new best score :0.9607417760195259
+2019-04-12 13:47:37,943 - INFO - 64 : memory usage 314228736
+2019-04-12 13:47:37,943 - INFO - 64 : child memory usage 559460352
+2019-04-12 13:47:37,959 - INFO - 73 : cpu time 73.203125
+2019-04-12 13:47:37,979 - INFO - 73 : child cpu time 94.96875
+2019-04-12 13:47:38,019 - INFO - 168 : Iteration 1, new best ensemble: [0, 1, 2, 3, 4, 6, 6], new best score :0.9638272941499033
+2019-04-12 13:47:38,127 - INFO - 168 : Iteration 2, new best ensemble: [0, 1, 2, 3, 4, 6, 6, 6], new best score :0.9656897006079603
+2019-04-12 13:47:38,259 - INFO - 168 : Iteration 3, new best ensemble: [0, 1, 2, 3, 4, 6, 6, 6, 6], new best score :0.966926189426388
+2019-04-12 13:47:38,371 - INFO - 168 : Iteration 4, new best ensemble: [0, 1, 2, 3, 4, 6, 6, 6, 6, 6], new best score :0.967793477774367
+2019-04-12 13:47:38,371 - INFO - 172 : Final ensemble: [0, 1, 2, 3, 4, 6, 6, 6, 6, 6], score: 0.967793477774367. Best individual model score: 0.9401335612847018
+2019-04-12 13:47:38,371 - INFO - 179 : Unique models IDs in the ensemble: [0, 1, 2, 3, 4, 6]. Weights: [0.1, 0.1, 0.1, 0.1, 0.1, 0.5]
+2019-04-12 13:47:38,371 - INFO - 104 : Selected the pipelines for the ensemble in 2 seconds
+2019-04-12 13:47:42,048 - INFO - 262 : Ensembled iterations: [2, 7, 8, 5, 6, 1]. Ensembled algos: ['LogisticRegression', 'LogisticRegression', 'LightGBM', 'LightGBM', 'LightGBM', 'LightGBM']
+2019-04-12 13:47:42,232 - INFO - 154 : ActivityCompleted: Activity=TimeFitEnsemble, HowEnded=Success, Duration=13331.16[ms]
+2019-04-12 13:47:42,248 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:42,252 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:42,400 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=148.0[ms]
+2019-04-12 13:47:42,400 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:42,513 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=265.93[ms]
+2019-04-12 13:47:42,525 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:42,525 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:42,653 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=128.0[ms]
+2019-04-12 13:47:42,653 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:42,800 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=274.17[ms]
+2019-04-12 13:47:42,812 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-04-12 13:47:42,812 - INFO - 140 : ActivityStarted: Predict
+2019-04-12 13:47:42,940 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=128.0[ms]
+2019-04-12 13:47:42,944 - INFO - 332 : Computing classification metrics
+2019-04-12 13:47:43,112 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=300.03[ms]
+2019-04-12 13:47:43,116 - INFO - 154 : ActivityCompleted: Activity=RunEnsembling, HowEnded=Success, Duration=14635.19[ms]
+2019-04-12 13:47:43,200 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=21473.78[ms]
+2019-04-12 13:47:43,220 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After executing pipeline]memory usage 316612608
+2019-04-12 13:47:43,224 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After executing pipeline]child memory usage 559067136
+2019-04-12 13:47:43,261 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After executing pipeline]cpu time 73.390625
+2019-04-12 13:47:43,261 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][After executing pipeline]child cpu time 99.0625
+2019-04-12 13:47:43,261 - INFO - 161 : Pipeline execution finished with a score of 0.967793477774367
+2019-04-12 13:47:43,263 - INFO - 162 : Start logging metrics for child run.
+2019-04-12 13:47:43,263 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-04-12 13:47:44,437 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-04-12 13:47:44,445 - INFO - 267 : The following metrics have been logged for the child run: {'precision_score_micro': 0.9065925925925926, 'accuracy_table': <class 'dict'>, 'f1_score_macro': 0.9065816494585915, 'recall_score_macro': 0.9066673062683362, 'recall_score_micro': 0.9065925925925926, 'average_precision_score_macro': 0.9672078850034082, 'AUC_macro': 0.967793477774367, 'average_precision_score_micro': 0.9672078850034082, 'precision_score_macro': 0.9066787829439046, 'recall_score_weighted': 0.9065925925925926, 'balanced_accuracy': 0.9066673062683362, 'f1_score_micro': 0.9065925925925926, 'norm_macro_recall': 0.8133346125366726, 'precision_score_weighted': 0.9067747999080785, 'AUC_weighted': 0.967793477774367, 'accuracy': 0.9065925925925926, 'AUC_micro': 0.967793477774367, 'f1_score_weighted': 0.9065923125503134, 'confusion_matrix': <class 'dict'>, 'log_loss': 0.2439507182823438, 'weighted_accuracy': 0.9065179397551546, 'average_precision_score_weighted': 0.9672078850034082, 'predict_time': <class 'float'>}.
+2019-04-12 13:47:45,657 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2394.34[ms]
+2019-04-12 13:47:46,901 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][End fit_pipeline]memory usage 315322368
+2019-04-12 13:47:46,905 - INFO - 64 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][End fit_pipeline]child memory usage 315322368
+2019-04-12 13:47:46,905 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][End fit_pipeline]cpu time 75.09375
+2019-04-12 13:47:46,905 - INFO - 73 : [RunId:AutoML_25318bc8-663a-4a6d-8198-734ad80be0db_9][End fit_pipeline]child cpu time 99.484375
+2019-04-12 13:47:46,905 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=25331.46 [ms]
+2019-04-12 13:47:47,634 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=27900.69 [ms]
+2019-04-12 13:47:49,066 - INFO - 600 : Run Complete.
