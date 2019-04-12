@@ -19,13 +19,13 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Azure Functionalities**: 
 * **Results**: 
 
-### [`mashable_news_popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/machine-translation/train_wrapper.ipynb)
+### [`machine-translation`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/machine-translation/train_wrapper.ipynb)
 * **Task**: Translating sentences from German to English
 * **Methods**:
 * **Azure Functionalities**: 
 * **Results**:
 
-### [`mashable_news_popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/mashable-news-popularity/mashable_news_popularity.ipynb)
+### [`mashable-news-popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/mashable-news-popularity/mashable_news_popularity.ipynb)
 * **Task**: 
 * **Methods**:
 * **Azure Functionalities**: 
