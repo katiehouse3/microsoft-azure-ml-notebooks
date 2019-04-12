@@ -21,12 +21,12 @@ This repository contains end-to-end machine learning notebooks made by students 
 
 ### [`machine-translation`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/machine-translation/train_wrapper.ipynb)
 * **Task**: Translating sentences from German to English
-* **Methods**:
-* **Azure Functionalities**: 
-* **Results**:
+* **Methods**: Using BERT tokenizer, vanilla 2-layer, encoder-to-decoder architecture (more changes will be made to build more sophisticated model; transformer next)
+* **Azure Functionalities**: Register DataStore, AML Compute, Submitting Experiment Runs
+* **Results**: Actual BLEU score results pending. 
 
 ### [`mashable-news-popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/mashable-news-popularity/mashable_news_popularity.ipynb)
-* **Task**: 
-* **Methods**:
-* **Azure Functionalities**: 
-* **Results**:
+* **Task**: Predicting popularity of online news articles based on number of shares
+* **Methods**: Classification
+* **Azure Functionalities**: Auto Machine Learning (AML). Next steps: hyperparameter tuning, deploying model, and explaining model decisions
+* **Results**: Iterated over 30 models using AML module.
