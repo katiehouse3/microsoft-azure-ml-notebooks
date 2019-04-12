@@ -50,8 +50,8 @@ run = Run.get_context()
 # IMPORT DATA
 print("\nImporting Data...")
 
-X_train, y_train = get_data("Data/train_data.txt")
-X_test, y_test = get_data("Data/test_data.txt")
+X_train, y_train = get_data("data/train_data.txt")
+X_test, y_test = get_data("data/test_data.txt")
 
 X_train = X_train.toarray() # convert sparce matrix to array
 X_test = X_test.toarray() 
