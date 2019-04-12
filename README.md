@@ -14,10 +14,10 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Results**: 
 
 ### [`telecom-churn`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/telecom-churn/Telecom%20Churn.ipynb)
-* **Task**: 
-* **Methods**: 
-* **Azure Functionalities**: 
-* **Results**: 
+* **Task**: Classifying customers for customer retention problem. 
+* **Methods**: Model with highest accuracy- RandomForest
+* **Azure Functionalities**: Model explanation
+* **Results**: Understood the features responsible for someone's churn. 
 
 ### [`machine-translation`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/machine-translation/train_wrapper.ipynb)
 * **Task**: Translating sentences from German to English
