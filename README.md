@@ -8,7 +8,7 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Results**: Increased testing accuracy by 3.25%!
 
 ### [`CIFAR-notebook`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/tree/master/CIFAR-notebook)
-* **Task**: Classification images on the CIFAR 10 dataset
+* **Task**: Image Classification on the CIFAR 10 dataset
 * **Methods**: Fully connected neural network model
 * **Azure Functionalities**: Hyperdrive run, Metric logging
 * **Results**: Increased model classification accuracy by ~16%!
