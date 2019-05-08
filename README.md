@@ -7,7 +7,7 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Azure Functionalities**: Running an Experiment, Automated Machine Learning, and Logging Metrics
 * **Results**: Increased testing accuracy by 3.25%!
 
-### [`CIFAR-notebook`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/CIFAR-notebook/CIFAR100.ipynb)
+### [`CIFAR-notebook`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/CIFAR-notebook/Azure-Cifar10_FcNet.ipynb)
 * **Task**: Image Classification on the CIFAR 10 dataset
 * **Methods**: Fully connected neural network model
 * **Azure Functionalities**: Hyperdrive run, Metric logging
