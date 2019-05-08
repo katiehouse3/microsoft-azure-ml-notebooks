@@ -1,0 +1,9 @@
+
+Churn is the activity of customers leaving the services offered by any company or fitness gym. They could leave due to dissatisfaction of the services, or if they moved to a new place, or if their needs changed but the price didn't! There can be many reasons. Now, it would beneficial if there was some kind of survey at the end, when the customer left to understand why they leave, but in most of the cases, there isn't.
+
+Aim- To analyse customer profile data with respect to customer churn, to predict in advance the profiles of customers who are prone to leaving and to understand how to predictive model decided why a customer left or didn't leave.
+
+The main file is the python notebook. churn2.csv is the dataset that I have used. Links given in the notebook.
+
+This notebook shows how to use azureML services to train and explain certain models. All of the analysis is done based on the  given data and aim at hand. 
+
