@@ -24,6 +24,7 @@ This repository contains end-to-end machine learning notebooks made by students 
 * **Methods**: Using pre-trained BERT representations in Transformer Model
 * **Azure Functionalities**: Register DataStore, AML Compute, Submitting and Cancelling Experiment Runs
 * **Results**: 26.3
+* **Note**: Implementation closely follows this [tutorial](https://github.com/bentrevett/pytorch-seq2seq/blob/master/1%20-%20Sequence%20to%20Sequence%20Learning%20with%20Neural%20Networks.ipynb)
 
 ### [`mashable-news-popularity`](https://github.com/katiehouse3/microsoft-azure-ml-notebooks/blob/master/mashable-news-popularity/mashable_news_popularity.ipynb)
 * **Task**: Predicting popularity of online news articles based on number of shares
